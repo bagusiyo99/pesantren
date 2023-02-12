@@ -44,6 +44,25 @@
                         </ul>
                     </nav>
 
+
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                            data-accordion="false">
+                            <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+                            <li class="nav-item">
+                                <a href="/admin/pesan"
+                                    class="nav-link  {{ Request::is('admin/pesan*') ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-inbox"></i>
+                                    <p>
+                                        Pesan
+                                        {{-- <span class="right badge badge-danger">New</span> --}}
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                             data-accordion="false">
@@ -172,55 +191,6 @@
                                 </ul>
                             </li>
                     </nav>
-
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link  {{ Request::is('admin/blog*') ? 'active' : '' }}">
-                            <i class="nav-icon fa fa-box"></i>
-                            <p>
-                                Accessories
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/admin/charger" class="nav-link">
-                                    <i class="fa  fa-forward nav-icon"></i>
-                                    <p>Charger</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/admin/casing" class="nav-link">
-                                    <i class="fa  fa-forward nav-icon"></i>
-                                    <p>Casing </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/admin/pb" class="nav-link">
-                                    <i class="fa  fa-forward nav-icon"></i>
-                                    <p>Power Bank </p>
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a href="/admin/usb" class="nav-link">
-                                    <i class="fa  fa-forward nav-icon"></i>
-                                    <p>Usb </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/admin/lainaksesoris" class="nav-link">
-                                    <i class="fa  fa-forward nav-icon"></i>
-                                    <p>Lainnya </p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
 
 
 

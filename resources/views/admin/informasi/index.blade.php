@@ -2,10 +2,10 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <table class="table">
+                <table class="table table-bordered text-center">
                     <a href="/admin/informasi/create" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah</a>
 
-                    <tr>
+                    <tr class="btn-secondary">
                         <td> No </td>
                         <td> Gambar </td>
                         <td> Judul</td>
@@ -21,9 +21,9 @@
                             {{-- <td> {{ $item->desc }} </td> --}}
 
                             <td>
-                                <div class="d-flex">
+                                <div class="text-center mb-1">
                                     <a href="/admin/informasi/{{ $item->id }}/edit "
-                                        class="btn btn-success">Edit</a>
+                                        class="btn btn-success  mb-2">Edit</a>
 
                                     <form action="/admin/informasi/{{ $item->id }}" method="POST">
                                         @method ('delete')

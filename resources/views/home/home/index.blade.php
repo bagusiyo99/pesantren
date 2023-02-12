@@ -80,7 +80,7 @@
     </div>
 </div> --}}
 
-<div class="main">
+{{-- <div class="main">
     <h3 class="heading">Promo</h3>
 </div>
 <div class="atur ">
@@ -103,7 +103,7 @@
     <div class="d-flex justify-content-center mt-3">
         {{ $promo->links() }}
     </div>
-</nav>
+</nav> --}}
 
 
 
