@@ -3,64 +3,16 @@
     color: #fff;
 }
 
-/* a {
-    text-decoration: none;
-} */
-
-/* pagination */
-.page-item.active .page-link {
-    z-index: 3;
-    color: #fff;
-    background-color: #198754;
-    border-color: #198754;
-}
-
-.page-link {
-    position: relative;
-    display: block;
-    color: #198754;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
 
 /*****************************
     NavBar
 ******************************/
-header nav {
-    background: #fff;
-    box-shadow: 0px 0px 15px #4444;
+nav {
+    box-shadow: 0px 0px 15px #9e0c0c44;
 }
 
-header nav a.navbar-brand h2 {
-
-    color: orange;
-}
-
-header nav ul.action-menu .nav-item .nav-link {
-    margin: 0px 20px;
-    font-size: 18px;
-}
-
-.navbar-toggler {
-    outline: none !important;
-    outline-color: transparent !important;
-    padding: none !important;
-    border: none !important;
-    border-radius: none !important;
-    -webkit-border-radius: none !important;
-    -moz-border-radius: none !important;
-    -ms-border-radius: none !important;
-    -o-border-radius: none !important;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: #379237;
-}
-
-.baca {
-    color: orange;
+.navbar-dark .navbar-nav .nav-link {
+    color: #f9fafb;
 }
 
 .menu-active {
@@ -68,6 +20,33 @@ header nav ul.action-menu .nav-item .nav-link {
     font-weight: 700;
 }
 
+.menu-active {
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.menu-active ::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    height: 2px;
+    width: 100px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-active :hover::after {
+    opacity: 1;
+}
 
 .wrapper-img {
     width: 100%;
