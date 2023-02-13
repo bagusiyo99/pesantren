@@ -99,17 +99,18 @@
                         </ul>
                     </nav>
 
+
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                             data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                             <li class="nav-item">
-                                <a href="/admin/promo"
-                                    class="nav-link  {{ Request::is('admin/promo*') ? 'active' : '' }}">
+                                <a href="/admin/blog"
+                                    class="nav-link  {{ Request::is('admin/blog*') ? 'active' : '' }}">
                                     <i class="nav-icon fa fa-bullhorn"></i>
                                     <p>
-                                        Promo
+                                        blog
                                         {{-- <span class="right badge badge-danger">New</span> --}}
                                     </p>
                                 </a>

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminAbout;
 use App\Http\Controllers\AdminAsus;
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdminBanner;
+use App\Http\Controllers\AdminBlog;
 use App\Http\Controllers\AdminCasing;
 use App\Http\Controllers\AdminCharger;
 use App\Http\Controllers\AdminDasboard;
@@ -44,6 +45,10 @@ Route::get('/detail/{id}', [Home::class, 'detail']);
 Route::get('/informasi/{id}', [Home::class, 'informasi']);
 
 
+Route::get('/blog', [Home::class, 'blog']);
+Route::get('/blog/{id}', [Home::class, 'detailBlog']);
+
+
 // Route::get('/informasi', [HomeInfoController::class, 'index']);
 // Route::get('/informasi/detail/{id}', [HomeInfoController::class, 'detail']);
 // Route::get('/informasi', [HomeInfoController::class, 'index']);
@@ -67,16 +72,6 @@ Route::get('/hplain', [HomeHandphone::class, 'hplain']);
 Route::get('/hplain/detail/{id}', [HomeHandphone::class, 'detailhplain']);
 
 
-Route::get('/charger', [HomeAksesoris::class, 'index']);
-Route::get('/charger/detail/{id}', [HomeAksesoris::class, 'detail']);
-Route::get('/casing', [HomeAksesoris::class, 'casing']);
-Route::get('/casing/detail/{id}', [HomeAksesoris::class, 'detailcasing']);
-Route::get('/pb', [HomeAksesoris::class, 'pb']);
-Route::get('/pb/detail/{id}', [HomeAksesoris::class, 'detailpb']);
-Route::get('/usb', [HomeAksesoris::class, 'usb']);
-Route::get('/usb/detail/{id}', [HomeAksesoris::class, 'detailusb']);
-Route::get('/lainaksesoris', [HomeAksesoris::class, 'lainaksesoris']);
-Route::get('/lainaksesoris/detail/{id}', [HomeAksesoris::class, 'detaillainaksesoris']);
 
 
 Route::get('/contact', [HomeContact::class, 'index']);
@@ -91,12 +86,12 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/blog', function () {
-    $data = [
-        'content'=> 'home/blog/index'
-    ];
-    return view('home.layouts.wrapper',$data);
-});
+// Route::get('/blog', function () {
+//     $data = [
+//         'content'=> 'home/blog/index'
+//     ];
+//     return view('home.layouts.wrapper',$data);
+// });
 
 Route::get('/login', [AdminAuth::class, 'index']);
 Route::post('/login/do', [AdminAuth::class, 'doLogin']);
@@ -147,6 +142,7 @@ Route::prefix('/admin')->group(function (){
     Route::resource('/lainaksesoris', AdminLainaksesoris::class);
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);
+    Route::resource('/blog', AdminBlog::class);
 
 
 

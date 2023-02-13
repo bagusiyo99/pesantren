@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Banner;
+use App\Models\Blog;
 use App\Models\Informasi;
 use App\Models\Promo;
 use Illuminate\Http\Request;
@@ -25,14 +26,7 @@ class Home extends Controller
     return view('home.layouts.wrapper',$data);
     }
 
-    //     public function detail($id)
-    // {
-    // $data = [
-    //     'promo' => Promo::find($id),
-    //     'content'=> 'home/home/detail'
-    // ];
-    // return view('home.layouts.wrapper',$data);
-    // }
+
 
 
         public function informasi($id)
@@ -40,6 +34,31 @@ class Home extends Controller
     $data = [
         'informasi' => Informasi::find($id),
         'content'=> 'home/home/informasi'
+    ];
+    return view('home.layouts.wrapper',$data);
+    }
+
+
+
+    //khusus blog
+    function blog (){
+    $data = [
+    
+     
+        'blog' => Blog::get(),
+
+        'content'=> 'home/blog/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+    }
+
+
+
+        public function detailBlog($id)
+    {
+    $data = [
+        'blog' => Blog::find($id),
+        'content'=> 'home/blog/detail'
     ];
     return view('home.layouts.wrapper',$data);
     }

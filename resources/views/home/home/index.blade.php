@@ -74,38 +74,6 @@
 
 
 
-{{-- <div class="container mt-5">
-    <div class="text-center">
-        <h4> Blog </h4>
-    </div>
-</div> --}}
-
-{{-- <div class="main">
-    <h3 class="heading">Promo</h3>
-</div>
-<div class="atur ">
-    @foreach ($promo as $item)
-        <div class="card-jurusan">
-            <div class="card-image">
-                <a href="#">
-                    <img src="/{{ $item->gambar }}">
-                </a>
-            </div>
-            <div class="card-description">
-                <h3>{{ $item->judul }}</h3>
-                <p>{!! Str::limit($item->deskripsi, 70) !!}</p>
-                <a href="/detail/{{ $item->id }}">Detail</a>
-            </div>
-        </div>
-    @endforeach
-</div>
-<nav aria-label="Page navigation example  bg-success">
-    <div class="d-flex justify-content-center mt-3">
-        {{ $promo->links() }}
-    </div>
-</nav> --}}
-
-
 
 
 
@@ -119,7 +87,6 @@
         <div class="col-md-7 px-0">
             <h1 class="display-4 fst-italic">Beli Barang Elektronik Murah, (nama toko ) Solusinya!</h1>
             <p class="lead my-3">Dapatkan Update Informasi Terbaru hanya di website (nama toko ) </p>
-            {{-- <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> --}}
         </div>
     </div>
 
@@ -145,26 +112,3 @@
 
     </div>
 </main>
-
-{{-- <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
-                <h3 class="mb-0">Post title</h3>
-                <div class="mb-1 text-muted">Nov 11</div>
-                <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
-                    additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-            <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
-                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                    focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%"
-                        fill="#eceeef" dy=".3em">Thumbnail</text>
-                </svg>
-
-            </div>
-        </div>
-    </div> --}}
