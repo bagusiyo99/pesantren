@@ -91,6 +91,13 @@ Route::get('/about', function () {
 });
 
 
+Route::get('/blog', function () {
+    $data = [
+        'content'=> 'home/blog/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
+
 Route::get('/login', [AdminAuth::class, 'index']);
 Route::post('/login/do', [AdminAuth::class, 'doLogin']);
 
