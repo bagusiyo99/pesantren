@@ -134,6 +134,78 @@ nav {
     margin-bottom: 15px;
 }
 
+/* Fitur */
+/* ###### fitur ######## */
+.fitur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: space-between; (biar ada space antar fitur */
+    flex-wrap: wrap;
+    /* biar keatur */
+    padding: 0px 150px;
+    margin-top: 40px;
+}
+
+.fitur .fe-box {
+    width: 180px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 25px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #FF6E31;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* agar diklik muncul di box */
+.fitur .fe-box:hover {
+    box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
+    border: 3px solid #243763;
+}
+
+/* gambar */
+.fitur .fe-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.fitur .fe-box h6 {
+    display: inline-block;
+    margin-top: 5px;
+    /* display: inline-block;  (agar sesuai tulisan)*/
+
+    /* padding: 0px 8px 8px 0px;   (atas,kiri,bawah,kanan */
+    padding: 8px 8px 8px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: white;
+    background-color: #86C8BC;
+}
+
+/* button agar ada warna berbeda-beda */
+.fitur .fe-box:nth-child(2) h6 {
+    background-color: #3C6255;
+}
+
+.fitur .fe-box:nth-child(3) h6 {
+    background-color: #EB455F;
+}
+
+.fitur .fe-box:nth-child(4) h6 {
+    background-color: #FF6E31;
+}
+
+.fitur .fe-box:nth-child(5) h6 {
+    background-color: #243763;
+}
+
+.fitur .fe-box:nth-child(6) h6 {
+    background-color: #227C70;
+}
+
+
 
 /* card */
 
@@ -449,6 +521,10 @@ nav {
     }
 
     /* akhir sambutan */
+
+    .fitur {
+        padding: 0 180px;
+    }
 }
 
 @media screen and (max-width :840px) {
@@ -539,22 +615,29 @@ nav {
         margin-right: 40px;
     }
 
-    .section-p2 {
-        padding: 0px 120px;
-        margin-top: 60px;
+
+    /* fitru */
+    .fitur {
+        padding: 0 130px;
     }
 
+    @media screen and (max-width :400px) {
+        .fitur {
+            padding: 0 100px;
+        }
+    }
 
+    @media screen and (max-width :380px) {
+        .fitur {
+            padding: 0 90px;
+        }
+    }
 
-    /* .detail-jurusan p {
-        margin-left: 5%;
-        text-align: left;
-        width: 90%;
-        margin-top: 30px;
-    } */
-
-
-
+    @media screen and (max-width :360px) {
+        .fitur {
+            padding: 0 80px;
+        }
+    }
 
     /* garis bawah  detail */
     .main .heading {

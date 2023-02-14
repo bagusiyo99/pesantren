@@ -40,6 +40,54 @@
         <h4> About </h4>
     </div>
 </div> --}}
+
+
+<section class="fitur" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="4500">
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/1.jpg" alt="">
+            <h6> Kurikulum </h6>
+        </a>
+    </div>
+
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/2.jpg" alt="">
+            <h6> Prestasi </h6>
+        </a>
+    </div>
+
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/3.jpg" alt="">
+            <h6> Akreditasi </h6>
+        </a>
+    </div>
+
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/4.jpg" alt="">
+            <h6> Daftar</h6>
+        </a>
+    </div>
+
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/5.jpg" alt="">
+            <h6> Alumni </h6>
+        </a>
+    </div>
+
+    <div class="fe-box">
+        <a>
+            <img src="img/icon/6.jpg" alt="">
+            <h6> Bantuan </h6>
+        </a>
+    </div>
+
+</section>
+
+
 <div class="main">
     <h3 class="heading">About</h3>
 </div>
