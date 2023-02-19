@@ -20,6 +20,12 @@
 <!-- overlayScrollbars -->
 <script src="/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
+{{-- data tables --}}
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.13.2/datatables.min.js"></script>
+
+
+
+{{-- summernote --}}
 <script src="/plugins/summernote/summernote-bs4.min.js"></script>
 <script>
     $(function() {
@@ -41,6 +47,12 @@
 <script>
     tinymce.init({
         selector: '#mytextarea'
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
     });
 </script>
 

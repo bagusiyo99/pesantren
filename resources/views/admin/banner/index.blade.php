@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <table class="table table-bordered text-center">
+                <table class="table table-bordered text-center" id="myTable">
                     <a href="/admin/banner/create" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Tambah</a>
 
                     <tr class="btn-secondary">

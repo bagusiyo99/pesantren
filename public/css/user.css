@@ -3,8 +3,12 @@
     color: #fff;
 }
 
+a {
+    color: #222222;
+}
+
 .dropdown-item:hover {
-    background: rgb(2, 116, 2);
+    background: orange;
 }
 
 .nav-item:hover {

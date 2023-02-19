@@ -15,12 +15,19 @@
     <link rel="stylesheet" href="/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.2/datatables.min.css" />
 
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/adminlte.min.css">
     <script>
         tinymce.init({
             selector: '#mytextarea'
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
         });
     </script>
 </head>
