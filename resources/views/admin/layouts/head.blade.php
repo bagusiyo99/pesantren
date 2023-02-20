@@ -17,13 +17,18 @@
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.2/datatables.min.css" />
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.2/datatables.min.css" />
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <link href="/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/adminlte.min.css">
-    <script>
-        tinymce.init({
-            selector: '#mytextarea'
-        });
-    </script>
 
     <script>
         $(document).ready(function() {

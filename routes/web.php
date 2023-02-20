@@ -1,29 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminUserController;
-use App\Http\Controllers\AdminAbout;
-use App\Http\Controllers\AdminAsus;
-use App\Http\Controllers\AdminAuth;
-use App\Http\Controllers\AdminBanner;
-use App\Http\Controllers\AdminBlog;
-use App\Http\Controllers\AdminCasing;
-use App\Http\Controllers\AdminCharger;
-use App\Http\Controllers\AdminDasboard;
-use App\Http\Controllers\AdminHplain;
-use App\Http\Controllers\AdminInfinix;
-use App\Http\Controllers\AdminInformasi;
-use App\Http\Controllers\AdminIphone;
-use App\Http\Controllers\AdminLainaksesoris;
-use App\Http\Controllers\AdminOppo;
-use App\Http\Controllers\AdminPb;
-use App\Http\Controllers\AdminPendaftaran;
-use App\Http\Controllers\AdminPesan;
-use App\Http\Controllers\AdminPromo;
-use App\Http\Controllers\AdminSamsung;
-use App\Http\Controllers\AdminUsb;
-use App\Http\Controllers\AdminVivo;
-use App\Http\Controllers\AdminXiomi;
+
+
+/// lebih rapi dari sebelum nya admin nya di buat folder
+use App\Http\Controllers\admin\AdminUserController;
+use App\Http\Controllers\admin\AdminAbout;
+use App\Http\Controllers\admin\AdminAsus;
+use App\Http\Controllers\admin\AdminAuth;
+use App\Http\Controllers\admin\AdminBanner;
+use App\Http\Controllers\admin\AdminBlog;
+use App\Http\Controllers\admin\AdminCasing;
+use App\Http\Controllers\admin\AdminCharger;
+use App\Http\Controllers\admin\AdminDasboard;
+use App\Http\Controllers\admin\AdminInformasi;
+use App\Http\Controllers\admin\AdminPendaftaran;
+use App\Http\Controllers\admin\AdminPesan;
+
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeAksesoris;
 use App\Http\Controllers\HomeContact;

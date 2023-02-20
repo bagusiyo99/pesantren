@@ -17,7 +17,7 @@
         </div>
 
 
-        <form action="/pendaftaran/send" method="POST" enctype="multipart/form-data" class="row g-3">
+        <form action="/pendaftaran/send" method="POST" enctype="multipart/form-data" class="row g-3 align-center">
             @csrf
             <div class="form-group col-md-5">
                 <label for="">Nama</label>
@@ -34,7 +34,7 @@
                 @enderror
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-md-5">
                 <label for="">Email</label>
                 <input type="text" name="email"
                     class="form-control                             
@@ -49,7 +49,7 @@
                 @enderror
             </div>
 
-            <div class="col-12">
+            <div class="form-group col-md-5">
                 <label for="inputAddress" class="form-label">Address</label>
                 <input type="text" class="form-control" id="inputAddress" placeholder="Alamat" name="alamat">
                 @error('alamat')
@@ -59,7 +59,7 @@
                 @enderror
             </div>
 
-            <div class="col-12">
+            <div class="form-group col-md-5">
                 <label for="inputAddress" class="form-label">Whatsapp </label>
                 <input type="text" class="form-control" id="inputAddress" placeholder="Whatsapp" name="telpon">
                 @error('telpon')
@@ -69,7 +69,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-5 mb-3">
                 <label for="formFile" class="form-label">Default file input example</label>
                 <input class="form-control" type="file" id="formFile" name="gambar">
                 @error('gambar')
@@ -80,7 +80,7 @@
             </div>
 
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
                 @error('pesan')
@@ -92,8 +92,8 @@
 
 
 
-            <div class="col-12 my-5">
-                <button type="submit" class="btn btn-primary">Kirim</button>
+            <div class="col-5 my-5">
+                <button type="submit" class="btn btn-success">Kirim</button>
             </div>
 
 

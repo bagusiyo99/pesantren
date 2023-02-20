@@ -19,7 +19,7 @@
 
                 <li class="nav-item mx-2">
                     <a class="nav-link  {{ Request::is('pendaftaran') ? 'menu-active' : '' }}"
-                        href="/pendaftaran">Blog</a>
+                        href="/pendaftaran">Pendaftaran</a>
                 </li>
 
                 <li class="nav-item dropdown mx-2">
