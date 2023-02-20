@@ -76,6 +76,8 @@ Route::post('/contact/send', [HomeContact::class, 'send']);
 Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
+Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
+
 
 Route::get('/about', function () {
     $data = [

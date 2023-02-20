@@ -2,10 +2,14 @@
 
 /// dua komponen jika di buat folder
 namespace App\Http\Controllers\admin;
+
+use App\Exports\PendaftaransExport;
 use App\Http\Controllers\Controller;
 
 use App\Models\Pendaftaran;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminPendaftaran extends Controller
@@ -44,6 +48,13 @@ class AdminPendaftaran extends Controller
         return redirect ('/admin/pendaftaran');
         
     }
+
+
+        public function export() 
+    {
+        return Excel::download(new PendaftaransExport ,'pendaftaran-'.Carbon::now()->timestamp. '.xlsx');
+    }
+
 
 }
 
