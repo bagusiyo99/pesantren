@@ -16,6 +16,12 @@
                 <li class="nav-item mx-2">
                     <a class="nav-link  {{ Request::is('blog') ? 'menu-active' : '' }}" href="/blog">Blog</a>
                 </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link  {{ Request::is('pendaftaran') ? 'menu-active' : '' }}"
+                        href="/pendaftaran">Blog</a>
+                </li>
+
                 <li class="nav-item dropdown mx-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">

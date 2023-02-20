@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminIphone;
 use App\Http\Controllers\AdminLainaksesoris;
 use App\Http\Controllers\AdminOppo;
 use App\Http\Controllers\AdminPb;
+use App\Http\Controllers\AdminPendaftaran;
 use App\Http\Controllers\AdminPesan;
 use App\Http\Controllers\AdminPromo;
 use App\Http\Controllers\AdminSamsung;
@@ -28,6 +29,7 @@ use App\Http\Controllers\HomeAksesoris;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeHandphone;
 use App\Http\Controllers\HomeInfoController;
+use App\Http\Controllers\HomePendaftaran;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +80,10 @@ Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
 
 
+Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
+Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
+
+
 Route::get('/about', function () {
     $data = [
         'content'=> 'home/about/index'
@@ -122,6 +128,8 @@ Route::prefix('/admin')->group(function (){
 
     Route::resource('/about', AdminAbout::class);
     Route::resource('/pesan', AdminPesan::class);
+    Route::resource('/pendaftaran', AdminPendaftaran::class);
+
     // Route::resource('/pesan/detail', [AdminPesan::class, 'detail']);
 
 
