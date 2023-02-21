@@ -16,6 +16,8 @@ use App\Http\Controllers\admin\AdminDasboard;
 use App\Http\Controllers\admin\AdminInformasi;
 use App\Http\Controllers\admin\AdminPendaftaran;
 use App\Http\Controllers\admin\AdminPesan;
+use App\Http\Controllers\admin\AdminFormulir;
+
 
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeAksesoris;
@@ -42,6 +44,9 @@ Route::get('/informasi/{id}', [Home::class, 'informasi']);
 
 Route::get('/blog', [Home::class, 'blog']);
 Route::get('/blog/{id}', [Home::class, 'detailBlog']);
+
+
+Route::get('/formulir', [Home::class, 'formulir']);
 
 
 // Route::get('/informasi', [HomeInfoController::class, 'index']);
@@ -146,6 +151,7 @@ Route::prefix('/admin')->group(function (){
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);
     Route::resource('/blog', AdminBlog::class);
+    Route::resource('/formulir', AdminFormulir::class);
 
 
 

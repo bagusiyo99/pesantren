@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Banner;
 use App\Models\Blog;
+use App\Models\Formulir;
 use App\Models\Informasi;
 use App\Models\Promo;
 use Illuminate\Http\Request;
@@ -59,6 +60,18 @@ class Home extends Controller
     $data = [
         'blog' => Blog::find($id),
         'content'=> 'home/blog/detail'
+    ];
+    return view('home.layouts.wrapper',$data);
+    }
+
+
+        function formulir (){
+    $data = [
+    
+     
+        'formulir' => Formulir::get(),
+
+        'content'=> 'home/formulir/index'
     ];
     return view('home.layouts.wrapper',$data);
     }

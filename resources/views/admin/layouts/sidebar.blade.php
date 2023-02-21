@@ -2,7 +2,7 @@
         <!-- Brand Logo -->
         <a href="../../index3.html" class="brand-link">
             <img src="/" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-dark">Panel ADMIN </span>
+            <span class="brand-text font-weight-dark ml-3">PANEL ADMIN BAGUS </span>
         </a>
 
         <!-- Sidebar -->
@@ -69,9 +69,26 @@
                             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
                             <li class="nav-item">
+                                <a href="/admin/formulir"
+                                    class="nav-link  {{ Request::is('admin/formulir*') ? 'active' : '' }}">
+                                    <i class="nav-icon   fas fa-solid fa-folder"></i>
+                                    <p>
+                                        Formulir
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                            data-accordion="false">
+                            <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
+                            <li class="nav-item">
                                 <a href="/admin/pendaftaran"
                                     class="nav-link  {{ Request::is('admin/pendaftaran*') ? 'active' : '' }}">
-                                    <i class="nav-icon fas fa-inbox"></i>
+                                    <i class="nav-icon fas fa-solid fa-address-card"></i>
                                     <p>
                                         Pendaftaran
                                         {{-- <span class="right badge badge-danger">New</span> --}}
