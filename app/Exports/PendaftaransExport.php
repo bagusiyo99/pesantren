@@ -30,6 +30,7 @@ class PendaftaransExport implements FromQuery, WithMapping ,WithHeadings
         public function map($pendaftaran): array
     {
         return [
+            $pendaftaran->id,
             $pendaftaran->nama,
             $pendaftaran->email,
             $pendaftaran->telpon,
@@ -44,7 +45,7 @@ class PendaftaransExport implements FromQuery, WithMapping ,WithHeadings
        public function headings(): array
     {
         return [
-            '$loop',
+            'No',
             'Nama',
             'Email',
             'Whatsaap atau No telpon',

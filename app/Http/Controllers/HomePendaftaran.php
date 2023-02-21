@@ -30,8 +30,18 @@ class HomePendaftaran extends Controller
             'telpon' => 'required ',
             'pesan' => 'required ',
             'gambar' => 'required',
+        ],
+      [
+                'nama.required'=> 'Nama Lengkap WAJIB DIISI',
+                'email.required'=> 'Email WAJIB DIISI',
+                'alamat.required'=> 'Alamat WAJIB DIISI',
+                'pesan.required'=> 'Deskripsi WAJIB DIISI',
+                'gambar.required'=> 'Bulti Pembayaran WAJIB DIISI',
+                'telpon.required'=> 'No Telpon Atau Whatsaap WAJIB DIISI',
 
-        ]);
+            ]);
+       
+
                 // upload gambar
         if ($request -> hasFile('gambar')) {
             $gambar = $request->file('gambar');
@@ -47,6 +57,7 @@ class HomePendaftaran extends Controller
         Pendaftaran::create($data);
         Alert::success('sukses', 'Pesan berhasil dikirim');
         return redirect('/pendaftaran');
+        
 
     }
 
