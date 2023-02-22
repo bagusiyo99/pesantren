@@ -6,10 +6,12 @@
         @foreach ($foto as $item)
             <div class="col mb-5">
                 <div class="card" style="width: 18rem;">
-                    <img src="/{{ $item->gambar }}" class="card-img-top" alt="..." height="200px">
+                    <a href="/foto">
+                        <img src="/{{ $item->gambar }}" class="card-img-top" alt="..." height="200px">
+                    </a>
                     <div class="card-body">
-                        <p class="card-text" height="400px">
-                            {{ $item->judul }}
+                        <p class="card-text">
+                            {!! Str::limit($item->judul, 40) !!}
                         </p>
                     </div>
                 </div>

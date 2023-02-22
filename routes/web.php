@@ -6,12 +6,10 @@ use Illuminate\Support\Facades\Route;
 /// lebih rapi dari sebelum nya admin nya di buat folder
 use App\Http\Controllers\admin\AdminUserController;
 use App\Http\Controllers\admin\AdminAbout;
-use App\Http\Controllers\admin\AdminAsus;
 use App\Http\Controllers\admin\AdminAuth;
 use App\Http\Controllers\admin\AdminBanner;
 use App\Http\Controllers\admin\AdminBlog;
-use App\Http\Controllers\admin\AdminCasing;
-use App\Http\Controllers\admin\AdminCharger;
+
 use App\Http\Controllers\admin\AdminDasboard;
 use App\Http\Controllers\admin\AdminInformasi;
 use App\Http\Controllers\admin\AdminPendaftaran;
@@ -19,10 +17,8 @@ use App\Http\Controllers\admin\AdminPesan;
 use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
 use App\Http\Controllers\Home;
-use App\Http\Controllers\HomeAksesoris;
 use App\Http\Controllers\HomeContact;
-use App\Http\Controllers\HomeHandphone;
-use App\Http\Controllers\HomeInfoController;
+
 use App\Http\Controllers\HomePendaftaran;
 
 /*
@@ -80,8 +76,7 @@ Route::get('/about', function () {
 //     ];
 //     return view('home.layouts.wrapper',$data);
 // });
-
-Route::get('/login', [AdminAuth::class, 'index']);
+Route::get('/login', [AdminAuth::class, 'index'])->name('login');
 Route::post('/login/do', [AdminAuth::class, 'doLogin']);
 
 Route::get('/logout', [AdminAuth::class, 'logout']);
@@ -89,9 +84,8 @@ Route::get('/logout', [AdminAuth::class, 'logout']);
 
 
 
-
 // Admin
-Route::prefix('/admin')->group(function (){
+Route::prefix('/admin')->middleware('auth')->group(function (){
         Route::get('/dasboard', [AdminDasboard::class, 'index']);
 
 

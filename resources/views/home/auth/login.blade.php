@@ -1,18 +1,25 @@
- <div class="container mt-5">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="/img/elektro.jpg" width="100%" alt="">
+            <img src="/img/user.svg" width="100%" alt="">
         </div>
 
         <div class="col-md-6">
             <div class="card mt-5">
                 <div class="card-body">
-                    <div class="text-center"><strong><h4>LOGIN</h4></strong></div>
+                    <div class="text-center">
+                        <h4>LOGIN</h4>
+                    </div>
                     <p class="text-center">Msukan akses akun anda </p>
-                    <form action="">
+
+                    @if (session()->has('loginError'))
+                        <div class="alert alert-danger"> {{ session('loginError') }}</div>
+                    @endif
+                    <form action="/login/do" method="POST">
+                        @csrf
                         <div class="form-group">
-                            <label for="">USERNAME</label>
-                            <input type="text" name="name" class="form-control" placeholder="Username">
+                            <label for="">Email</label>
+                            <input type="text" name="email" class="form-control" placeholder="Email">
                         </div>
 
                         <div class="form-group mt-3">
@@ -26,13 +33,5 @@
 
             </div>
         </div>
-
-
-
-
-
-
-
     </div>
-</div> 
-
+</div>

@@ -9,11 +9,11 @@
 
             <table class="table table-bordered text-center align-items-center" id="example">
 
-                <thead class="table-primary">
-                    <tr>
-                        <td> No </td>
-                        <td> Judul</td>
-                        <td> Action </td>
+                <thead class="table-primary text-center">
+                    <tr class="text-center">
+                        <td class="text-center" width="50px"> No </td>
+                        <td class="text-center"> Judul</td>
+                        <td class="text-center"> Action </td>
                     </tr>
                 </thead>
 
@@ -22,7 +22,8 @@
                         <tr>
                             <td> {{ $loop->iteration }} </td>
                             <td> {{ $item->judul }} </td>
-                            <td><a class="btn btn-success " href="{{ $item->file }}"download>Download</a></td>
+                            <td><a class="btn btn-success " width="60px" href="{{ $item->file }}"download><i
+                                        class="fa-sharp fa-solid fa-circle-down"></i> Download</a></td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -32,7 +33,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container mt-5">
     <div class="row mb-5">
         <div class="col-sm-6">
             <div class="card">

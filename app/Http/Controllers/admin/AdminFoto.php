@@ -110,7 +110,7 @@ class AdminFoto extends Controller
     {   
         $foto = Foto::find($id);
          $data = $request -> validate ([
-            'judul' => 'required',
+            'judul' => 'required|max:50',
             'deskripsi' => 'required ',
 
         ]);

@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-success">
     <div class="container">
-        <a class="navbar-brand" href="#">Bagus</a>
+        <a class="navbar-brand" href="/logo/LOGO.png">BAGUS </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,9 +24,12 @@
                         Tentang Kami
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/about">Pengenalan</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="/about">Sambutan & Sejarah</a></li>
+                        <li><a class="dropdown-item" href="#">Akreditas</a></li>
+                        <li><a class="dropdown-item" href="#">Prestasi</a></li>
+                        <li><a class="dropdown-item" href="#">Alumni</a></li>
+                        <li><a class="dropdown-item" href="#">Visi & Misi</a></li>
+
                     </ul>
                 </li>
 
@@ -55,7 +58,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="/contact" class="dropdown-item">Kirim Pesan</a>
-                        <a href="/pendaftaran" class="dropdown-item">Konfirmasi Pendaftaran</a>
+                        <a href="/pendaftaran" class="dropdown-item">Alamat</a>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>

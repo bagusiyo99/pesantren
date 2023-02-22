@@ -7,7 +7,7 @@
                     <label for="">Gambar</label>
                 </div>
                 @if (isset($pendaftaran))
-                    <img src="/{{ $pendaftaran->gambar }}" width="300px" height="300px" class="mt-4" alt="">
+                    <img src="/{{ $pendaftaran->gambar }}" width="900px" height="700px" class="mt-4" alt="">
                 @endif
 
                 <div class="form-group mt-3">
