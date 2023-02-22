@@ -164,15 +164,15 @@
                                 <a href="#" class="nav-link  {{ Request::is('admin/blog*') ? 'active' : '' }}">
                                     <i class="nav-icon fas fa-briefcase"></i>
                                     <p>
-                                        Handphone
+                                        Galeri
                                         <i class="right fas fa-angle-left"></i>
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="/admin/samsung" class="nav-link">
+                                        <a href="/admin/foto" class="nav-link">
                                             <i class="fa fa-duotune fa-pen nav-icon"></i>
-                                            <p>Samsung</p>
+                                            <p>Foto</p>
                                         </a>
                                     </li>
 
@@ -232,7 +232,41 @@
 
 
 
-
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-edit"></i>
+                            <p>
+                                Forms
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="pages/forms/general.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>General Elements</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/advanced.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Advanced Elements</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/editors.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Editors</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="pages/forms/validation.html" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Validation</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
 
 
