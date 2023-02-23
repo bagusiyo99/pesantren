@@ -9,6 +9,7 @@ use App\Models\Formulir;
 use App\Models\Foto;
 use App\Models\Informasi;
 use App\Models\Promo;
+use App\Models\SiswaBaru;
 use Illuminate\Http\Request;
 
 class Home extends Controller
@@ -87,5 +88,17 @@ class Home extends Controller
         'content'=> 'home/foto/index'
     ];
     return view('home.layouts.wrapper',$data);
+    }
+
+    
+        function siswa (){
+    $data = [
+    
+     
+        'siswa' => SiswaBaru::get(),
+
+        'content'=> 'admin/siswa/index'
+    ];
+    return view('admin.layouts.wrapper',$data);
     }
 }

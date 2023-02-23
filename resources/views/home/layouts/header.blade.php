@@ -68,9 +68,11 @@
                         Pendaftaran
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="/prosedur" class="dropdown-item">Tata Cara Pendaftaran</a>
                         <a href="/formulir" class="dropdown-item">Formulir</a>
+                        <a href="/siswa" class="dropdown-item">Daftar Sekarang</a>
+
                         <a href="/pendaftaran" class="dropdown-item">Konfirmasi Pendaftaran</a>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                 </li>
 

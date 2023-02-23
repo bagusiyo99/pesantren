@@ -114,6 +114,15 @@
                                         </p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/admin/siswa"
+                                        class="nav-link  {{ Request::is('admin/siswa*') ? 'active' : '' }}">
+                                        <i class="nav-icon   fas fa-solid fa-folder"></i>
+                                        <p>
+                                            Siswa Pendaftaran
+                                        </p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 

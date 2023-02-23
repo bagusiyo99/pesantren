@@ -9,17 +9,19 @@ use App\Http\Controllers\admin\AdminAbout;
 use App\Http\Controllers\admin\AdminAuth;
 use App\Http\Controllers\admin\AdminBanner;
 use App\Http\Controllers\admin\AdminBlog;
-
+use App\Http\Controllers\admin\AdminDaftar;
 use App\Http\Controllers\admin\AdminDasboard;
 use App\Http\Controllers\admin\AdminInformasi;
 use App\Http\Controllers\admin\AdminPendaftaran;
 use App\Http\Controllers\admin\AdminPesan;
 use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
+use App\Http\Controllers\AdminSiswa;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeContact;
-
+use App\Http\Controllers\HomeDaftar;
 use App\Http\Controllers\HomePendaftaran;
+use App\Http\Controllers\HomeSiswa;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,8 +51,12 @@ Route::get('/foto', [Home::class, 'foto']);
 // Route::get('/informasi/detail/{id}', [HomeInfoController::class, 'detail']);
 // Route::get('/informasi', [HomeInfoController::class, 'index']);
 
+Route::get('/daftars', [AdminDaftar::class, 'index']);
 
 
+
+// Route::get('/daftar', [HomeDaftar::class, 'index']);
+// Route::post('/daftar/send', [HomeDaftar::class, 'send']);
 
 Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
@@ -59,12 +65,25 @@ Route::post('/contact/send', [HomeContact::class, 'send']);
 Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
+
+Route::get('/siswa', [HomeSiswa::class, 'index']);
+Route::post('/siswa/send', [HomeSiswa::class, 'send']);
+
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
 
 
 Route::get('/about', function () {
     $data = [
         'content'=> 'home/about/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
+
+
+
+Route::get('/prosedur', function () {
+    $data = [
+        'content'=> 'home/prosedur/index'
     ];
     return view('home.layouts.wrapper',$data);
 });
@@ -106,9 +125,13 @@ Route::prefix('/admin')->middleware('auth')->group(function (){
     Route::resource('/pesan', AdminPesan::class);
     Route::resource('/pendaftaran', AdminPendaftaran::class);
 
+        Route::resource('/siswa', AdminSiswa::class);
+
+
     // Route::resource('/pesan/detail', [AdminPesan::class, 'detail']);
 
 
+    Route::resource('/daftars', AdminDaftar::class);
 
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);
