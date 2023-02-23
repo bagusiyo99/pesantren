@@ -48,8 +48,8 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item  {{ Request::is('admin/*') ? 'menu-is-opening menu-open' : '' }}">
+                            <a href="#" class="nav-link ">
                                 <i class="nav-icon fa fa-solid fa-list"></i>
                                 <p>
                                     Tentang Kami
@@ -82,12 +82,12 @@
                                 </li>
 
                             </ul>
-                        </li>
+                            </>
 
 
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item  {{ Request::is('admin/*') ? 'menu-is-opening menu-open' : '' }}">
+                            <a href="#" class="nav-link ">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Pendaftaran
@@ -97,10 +97,10 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/admin/pendaftaran"
-                                        class="nav-link  {{ Request::is('admin/pendaftaran*') ? 'active' : '' }}">
+                                        class="nav-link   {{ Request::is('admin/pendaftaran*') ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-solid fa-address-card"></i>
                                         <p>
-                                            Pendaftaran
+                                            Konfirmasi Pendaftaran
                                             {{-- <span class="right badge badge-danger">New</span> --}}
                                         </p>
                                     </a>
@@ -117,7 +117,7 @@
                                 <li class="nav-item">
                                     <a href="/admin/siswa"
                                         class="nav-link  {{ Request::is('admin/siswa*') ? 'active' : '' }}">
-                                        <i class="nav-icon   fas fa-solid fa-folder"></i>
+                                        <i class="nav-icon   fas fa-solid fa-wallet"></i>
                                         <p>
                                             Siswa Pendaftaran
                                         </p>
@@ -126,8 +126,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item  {{ Request::is('admin/*') ? 'menu-is-opening menu-open' : '' }}">
+                            <a href="#" class="nav-link ">
                                 <i class="nav-icon fa fa-solid fa-camera"></i>
                                 <p>
                                     Galeri
@@ -136,7 +136,8 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/admin/foto" class="nav-link">
+                                    <a href="/admin/foto"
+                                        class="nav-link  {{ Request::is('admin/foto*') ? 'active' : '' }}">
                                         <i class="fa fa-duotune fa-pen nav-icon"></i>
                                         <p>Foto</p>
                                     </a>

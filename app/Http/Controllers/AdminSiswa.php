@@ -22,6 +22,14 @@ class AdminSiswa extends Controller
         return view ('admin.layouts.wrapper', $data );
     }
 
+       public function show ($id)
+    {
+    $data = [
+        'siswa' => SiswaBaru::find($id),
+        'content'=> 'admin/siswa/show'
+    ];
+    return view('admin.layouts.wrapper',$data);
+    }
 
 
     //     public function export() 

@@ -3,6 +3,7 @@
     color: #fff;
 }
 
+
 a {
     color: #222222;
     text-decoration: none;
@@ -29,7 +30,10 @@ a {
 /* tata cara daftar */
 .card-text {
     text-align: justify;
+    padding-left: 2px;
 }
+
+
 
 .btn-tata {
     text-align: center;
@@ -96,7 +100,7 @@ nav {
 
 /* About-user */
 .info {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -107,13 +111,9 @@ nav {
 .info .main-info img {
     width: 600px;
     max-width: 100%;
-    height: auto;
+    height: 500px;
     padding: 0 10px;
-    border-radius: 0px 0px 159px 0px;
-    -webkit-border-radius: 0px 0px 159px 0px;
-    -moz-border-radius: 0px 0px 159px 0px;
-    -ms-border-radius: 0px 0px 159px 0px;
-    -o-border-radius: 0px 0px 159px 0px;
+
 
 }
 
@@ -150,6 +150,7 @@ nav {
     font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 /* Fitur */
@@ -519,6 +520,19 @@ nav {
     color: #0A2647;
 }
 
+@media screen and (max-width :1290px) {
+    .fitur {
+        padding: 0 60px;
+    }
+
+    .info {
+        margin-top: 140px;
+    }
+
+    .tulis {
+        margin: 45px 0px;
+    }
+}
 
 @media screen and (max-width :1250px) {
 

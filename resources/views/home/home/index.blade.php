@@ -11,14 +11,10 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
             aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner mt-5">
         @foreach ($banner as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/{{ $item->gambar }}" class="img-carousel" alt="">
-                <div class="carousel-caption d-none d-md-block text-success">
-                    <h5>{{ $item->judul }}</h5>
-                    <p>{{ $item->deskripsi }}</p>
-                </div>
+                <img src="/{{ $item->gambar }}" class="d-block w-100" alt="">
             </div>
         @endforeach
 
@@ -35,11 +31,8 @@
     </button>
 </div>
 
-{{-- <div class="container my-5">
-    <div class="text-center">
-        <h4> About </h4>
-    </div>
-</div> --}}
+
+
 
 
 <section class="fitur" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="4500">
@@ -91,7 +84,7 @@
 <div class="main">
     <h3 class="heading">About</h3>
 </div>
-<section class="info mb-2">
+<section class="info mb-3">
     <div class="main-info">
         @foreach ($about as $item)
             <img src="/{{ $item->gambar }}">
@@ -105,24 +98,17 @@
     @endforeach
 </section>
 
-<div class="bg-success my-5">
+<div class="bg-success  my-3">
 
     <div class="container my-5">
         <div class="text-center text-white">
-            <h4> Pelajari lanjut </h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam magnam ducimus quam aliquid
-                reprehenderit assumenda nobis facere nostrum odit accusantium delectus, obcaecati commodi voluptas
-                dolorum unde eaque architecto deleniti totam!</p>
+            <h4> Hati-Hati Penipuan</h4>
+            <p> <strong> Selain dari website ini dan kontak yang tersedia kami tidak mempunyai website lain, jika ada
+                    yang
+                    mengatasnamakan kami harap lapor</strong> </p>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 
 
 

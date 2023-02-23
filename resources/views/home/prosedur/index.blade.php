@@ -8,28 +8,33 @@
     <div class="row mb-5">
         <div class="col-sm-7 ">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body ">
                     <h5 class="card-title">Pendaftaran Online</h5>
-
-                    <li>=> Mengakses Website Bagusaja melalui situs pencarian Google,Mozilla, dll, dengan mengetik
-                        link
-                        Bagusaja.coba
-                    </li>
-                    <li class="card-text">=> Mengisi Form pendaftaran dengan melengkapi data pada kolom yang tertera.
-                        dengan mendownload pada menu formulir dan kirim form pada menu <strong>Daftar Sekarang </strong>
-                    </li>
-                    <li class="card-text">=> Melakukan pembayaran untuk biaya pendaftaran dan test sebesar Rp. 650.000
-                        (enam ratus lima puluh ribu rupiah) ke : bank bagus no.rek coba coba
-                    </li>
-                    <li class="card-text">=> Mengupload bukti pembayaran biaya pendaftaran dan test melalui m-bangking
-                        atau
-                        transfer ATM . konfirmasi ke menu <strong> Konfirmasi Pembayaran. </strong>
+                    <ul class="list-unstyled">
+                        <p class="card-text">Mengakses Website Bagusaja melalui situs pencarian Google,Mozilla,
+                            dll, dengan mengetik
+                            link Bagusaja.coba
+                        </p>
+                        <p class="card-text">Mengisi Form pendaftaran dengan melengkapi data pada kolom yang
+                            tertera.
+                            dengan mendownload pada menu formulir dan kirim form pada menu <strong>Daftar Sekarang
+                            </strong>
+                        </p>
+                        <p class="card-text"> Melakukan pembayaran untuk biaya pendaftaran dan test sebesar Rp.
+                            650.000
+                            (enam ratus lima puluh ribu rupiah) ke : bank bagus no.rek coba coba
+                        </p>
+                        <p class="card-text"> Mengupload bukti pembayaran biaya pendaftaran dan test melalui
+                            m-bangking
+                            atau
+                            transfer ATM . konfirmasi ke menu <strong> Konfirmasi Pembayaran. </strong>
                         <p> <strong> Jika mengalami kendala bisa hubungi kami WA : 083399999 </strong></p>
-                    </li>
+                        </p>
+                    </ul>
                     <div class="btn-tata">
-                        <a href="/daftar" class="btn btn-success mt-1"> Formulir</a>
-                        <a href="/daftar" class="btn btn-primary mt-1">Daftar Sekarang</a>
-                        <a href="/daftar" class="btn btn-warning mt-1">Konfirmasi Pembayaran</a>
+                        <a href="/formulir" class="btn btn-success mt-1"> Formulir</a>
+                        <a href="/siswa" class="btn btn-primary mt-1">Daftar Sekarang</a>
+                        <a href="/pendaftaran" class="btn btn-warning mt-1">Konfirmasi Pembayaran</a>
 
                     </div>
                 </div>

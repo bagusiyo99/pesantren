@@ -16,7 +16,8 @@
     </div>
 
     <div class="huruf">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae harum natus corporis ab, quaerat non
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae harum natus corporis ab, quaerat
+            non
             nemo
             illo odit itaque cum quis debitis, qui reiciendis molestias mollitia hic fugit odio.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates harum veniam velit, eius in obcaecati
