@@ -71,6 +71,7 @@
                         <a href="/prosedur" class="dropdown-item">Tata Cara Pendaftaran</a>
                         <a href="/formulir" class="dropdown-item">Formulir</a>
                         <a href="/siswa" class="dropdown-item">Daftar Sekarang</a>
+                        <a href="/daftar_online" class="dropdown-item">Daftar Online</a>
 
                         <a href="/pendaftaran" class="dropdown-item">Konfirmasi Pendaftaran</a>
                     </ul>

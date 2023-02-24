@@ -16,10 +16,12 @@ use App\Http\Controllers\admin\AdminPendaftaran;
 use App\Http\Controllers\admin\AdminPesan;
 use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
+use App\Http\Controllers\AdminDaftarOnline;
 use App\Http\Controllers\AdminSiswa;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeDaftar;
+use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
 
@@ -54,6 +56,9 @@ Route::get('/foto', [Home::class, 'foto']);
 Route::get('/daftars', [AdminDaftar::class, 'index']);
 
 
+Route::get('/siswa', [HomeSiswa::class, 'index']);
+Route::post('/siswa/send', [HomeSiswa::class, 'send']);
+
 
 // Route::get('/daftar', [HomeDaftar::class, 'index']);
 // Route::post('/daftar/send', [HomeDaftar::class, 'send']);
@@ -65,9 +70,9 @@ Route::post('/contact/send', [HomeContact::class, 'send']);
 Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
+Route::get('/daftar_online', [HomeDaftarOnline::class, 'index']);
+Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
 
-Route::get('/siswa', [HomeSiswa::class, 'index']);
-Route::post('/siswa/send', [HomeSiswa::class, 'send']);
 
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
 
@@ -131,7 +136,7 @@ Route::prefix('/admin')->middleware('auth')->group(function (){
     // Route::resource('/pesan/detail', [AdminPesan::class, 'detail']);
 
 
-    Route::resource('/daftars', AdminDaftar::class);
+    Route::resource('/daftar_online', AdminDaftarOnline::class);
 
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);
