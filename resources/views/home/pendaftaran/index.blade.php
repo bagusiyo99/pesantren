@@ -17,7 +17,7 @@
         </div>
 
         <div class="container">
-            <form action="/daftar_online/send" method="POST" enctype="multipart/form-data" class="row g-3 align-center">
+            <form action="/pendaftaran/send" method="POST" enctype="multipart/form-data" class="row g-3 align-center">
                 @csrf
                 <div class="form-group col-md-5">
                     <label for="">Nama</label>
@@ -26,8 +26,7 @@
                         @error('nama')
                             is-invalid
                             @enderror"
-                        placeholder="Nama Lengkap"
-                        value="{{ isset($daftar_online) ? $daftar_online->nama : old('nama') }}">
+                        placeholder="Nama Lengkap" value="{{ isset($pendaftaran) ? $pendaftaran->nama : old('nama') }}">
                     @error('nama')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -42,7 +41,7 @@
                         @error('email')
                             is-invalid
                             @enderror"
-                        placeholder="Email" value="{{ isset($daftar_online) ? $daftar_online->email : old('email') }}">
+                        placeholder="Email" value="{{ isset($pendaftaran) ? $pendaftaran->email : old('email') }}">
                     @error('email')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -57,7 +56,7 @@
                         @error('alamat')
                             is-invalid
                             @enderror"
-                        value="{{ isset($daftar_online) ? $daftar_online->alamat : old('alamat') }}">
+                        value="{{ isset($pendaftaran) ? $pendaftaran->alamat : old('alamat') }}">
                     @error('alamat')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -73,7 +72,7 @@
                         @error('telpon')
                             is-invalid
                             @enderror"
-                        value="{{ isset($daftar_online) ? $daftar_online->telpon : old('telpon') }}">
+                        value="{{ isset($pendaftaran) ? $pendaftaran->telpon : old('telpon') }}">
                     @error('telpon')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -82,14 +81,13 @@
                 </div>
 
                 <div class="col-md-5 mb-3">
-                    <label for="formFile" class="form-label">Bukti Pembayaran daftar_online</label>
+                    <label for="formFile" class="form-label">Bukti Pembayaran pendaftaran</label>
                     <input type="file" id="formFile" name="gambar"
                         class="form-control                             
                         @error('gambar')
                             is-invalid
                             @enderror"
-                        placeholder="Email"
-                        value="{{ isset($daftar_online) ? $daftar_online->gambar : old('gambar') }}">
+                        placeholder="Email" value="{{ isset($pendaftaran) ? $pendaftaran->gambar : old('gambar') }}">
                     @error('gambar')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -105,7 +103,7 @@
                         @error('pesan')
                             is-invalid
                             @enderror"
-                        value="{{ isset($daftar_online) ? $daftar_online->pesan : old('pesan') }}"></textarea>
+                        value="{{ isset($pendaftaran) ? $pendaftaran->pesan : old('pesan') }}"></textarea>
                     @error('pesan')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -135,129 +133,4 @@
 
 
 
-    </div>
-
-
-
-
-
-    <div class="row">
-        <form action="/daftar_online/send" method="POST" enctype="multipart/form-data" class="row g-3 align-center">
-            <div class="col-xl-12">
-                <div class="custom-accordion">
-                    <div class="card">
-                        <a href="#personal-saya" class="text-dark" data-bs-toggle="collapse">
-                            <div class="p-4">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-grow-1 overflow-hidden">
-                                        <h5 class="font-size-16 mb-1">Data Pribadi</h5>
-                                        <p class="text-muted text-truncate mb-0">NISN, NIK, Nama, Jenis Kelamin, Pas
-                                            Photo, TTL, dsb</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <div id="personal-saya" class="collapse show">
-                            <div class="p-4 border-top">
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label">NISN</label>
-                                            <input type="text" id="personal-data-nisn" name="nisn"
-                                                class="form-control                             
-                                                    @error('email')
-                                                        is-invalid
-                                                    @enderror"
-                                                placeholder="Email"
-                                                value="{{ isset($daftar_online) ? $daftar_online->email : old('email') }}">
-                                            @error('email')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label" for="personal-data-nik">NIK</label>
-                                            <input type="text" class="form-control" id="personal-data-nik"
-                                                name="nik" placeholder="Masukkan NIK" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label" for="personal-data-name">Nama</label>
-                                            <input type="text" class="form-control" id="basicpill" name="nama"
-                                                placeholder="Masukkan Nama Lengkap" value="" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label" for="personal-data-gender">Jenis
-                                                Kelamin</label>
-                                            <select class="form-control wide" name="jk">
-                                                <option disabled selected>Pilih
-                                                    Jenis Kelamin </option>
-                                                <option value="Laki-laki">Laki-aki</option>
-                                                <option value="Perempuan">Perempuan</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="mb-4 mb-lg-0">
-                                            <label class="form-label">Tempat lahir</label>
-                                            <input type="text" class="form-control" id="basicpill"
-                                                name="tempatlahir" placeholder="Masukkan Tempat Lahir" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="mb-4 mb-lg-0">
-                                            <label class="form-label" for="billing-city">Tanggal lahir</label>
-                                            <input type="date" class="form-control" id="basicpill"
-                                                name="tanggallahir" placeholder="Masukkan Tanggal Lahir" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="mb-0">
-                                            <label class="form-label" for="zip-code">Pas Photo</label>
-                                            <div class="input-group">
-                                                <div class="form-file">
-                                                    <input type="file" class="form-file-input form-control"
-                                                        name="foto" accept="image/png, image/jpg, image/jpeg"
-                                                        required>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="row my-4">
-                    <div class="col">
-                        <div class="text-end mt-2 mt-sm-0">
-                            <button type="submit" name="add" class="btn btn-primary">Buat
-                                Pendaftaran</button>
-                        </div>
-                    </div>
-                    <!-- end col -->
-                </div>
-                <!-- end row-->
-            </div>
-        </form>
     </div>

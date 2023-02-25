@@ -27,14 +27,14 @@ class HomeDaftarOnline extends Controller
             'nisn' => 'required',
             'nik' => 'required',
             'nama_siswa' => 'required',
-            'jenis_kelamin' => 'required',
+            'jk' => 'required',
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'email' => 'required ',
             'alamat' => 'required',
             'hp' => 'required ',
             'gambar' => 'required',
-            'berkas' => 'required',
+            // 'berkas' => 'required',
 
             'nama_ayah' => 'required ',
             'nama_ibu' => 'required ',
@@ -49,14 +49,14 @@ class HomeDaftarOnline extends Controller
             'penghasilan_ibu' => 'required ',
 
 
-        ],
-      [
-                'nama.required'=> 'Nama Lengkap WAJIB DIISI',
-                'email.required'=> 'Email WAJIB DIISI',
-                'alamat.required'=> 'Alamat WAJIB DIISI',
-                'pesan.required'=> 'Deskripsi WAJIB DIISI',
-                'gambar.required'=> 'Bulti Pembayaran WAJIB DIISI',
-                'telpon.required'=> 'No Telpon Atau Whatsaap WAJIB DIISI',
+    //     ],
+    //   [
+    //             'nama.required'=> 'Nama Lengkap WAJIB DIISI',
+    //             'email.required'=> 'Email WAJIB DIISI',
+    //             'alamat.required'=> 'Alamat WAJIB DIISI',
+    //             'pesan.required'=> 'Deskripsi WAJIB DIISI',
+    //             'gambar.required'=> 'Bulti Pembayaran WAJIB DIISI',
+    //             'telpon.required'=> 'No Telpon Atau Whatsaap WAJIB DIISI',
             ]);
 
 
@@ -72,30 +72,29 @@ class HomeDaftarOnline extends Controller
             $data ['gambar'] = null;
         }
 
+        // if ($request -> hasFile('berkas')) {
+        //     $berkas = $request->file('berkas');
+        //     $file_name = time ().'-'. $berkas -> getClientOriginalName ();
 
-        // upload berkas
-        if ($request -> hasFile('berkas')) {
-            $berkas = $request->berkas('berkas');
-            $berkas_name = time ().'-'. $berkas -> getClientOriginalName ();
-            $storage = 'uploads/daftar_online/';
-            $berkas->move ($storage, $berkas_name);
-            $data ['berkas'] =$storage .$berkas_name;
-        }else {
-            $data ['berkas'] = null;
-        }
+        //     $storage = 'uploads/daftar_online/';
+        //     $berkas->move ($storage, $file_name);
+        //     $data ['berkas'] =$storage .$file_name;
+        // }else {
+        //     $data ['berkas'] = null;
+        // }
 
 
-        // upload file
+         // upload file
         if ($request -> hasFile('file')) {
             $file = $request->file('file');
             $file_name = time ().'-'. $file -> getClientOriginalName ();
+
             $storage = 'uploads/daftar_online/';
             $file->move ($storage, $file_name);
             $data ['file'] =$storage .$file_name;
         }else {
             $data ['file'] = null;
         }
-
 
         DaftarOnline::create($data);
         Alert::success('sukses', 'Pesan berhasil dikirim');
