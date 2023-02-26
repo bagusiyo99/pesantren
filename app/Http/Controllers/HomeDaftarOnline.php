@@ -33,8 +33,8 @@ class HomeDaftarOnline extends Controller
             'email' => 'required ',
             'alamat' => 'required',
             'hp' => 'required ',
-            'gambar' => 'required',
-            // 'berkas' => 'required',
+            'gambar' => 'required|file|max:2048',
+            'berkas' => 'required',
 
             'nama_ayah' => 'required ',
             'nama_ibu' => 'required ',
@@ -48,15 +48,31 @@ class HomeDaftarOnline extends Controller
             'file' => 'required ',
             'penghasilan_ibu' => 'required ',
 
-
-    //     ],
-    //   [
-    //             'nama.required'=> 'Nama Lengkap WAJIB DIISI',
-    //             'email.required'=> 'Email WAJIB DIISI',
-    //             'alamat.required'=> 'Alamat WAJIB DIISI',
-    //             'pesan.required'=> 'Deskripsi WAJIB DIISI',
-    //             'gambar.required'=> 'Bulti Pembayaran WAJIB DIISI',
-    //             'telpon.required'=> 'No Telpon Atau Whatsaap WAJIB DIISI',
+        ],
+      [
+                'nisn.required'=> 'Tidak Boleh Kosong',
+                'nik.required'=> 'Tidak Boleh Kosong',
+                'nama_siswa.required'=> 'Tidak Boleh Kosong',
+                'jk.required'=> 'Tidak Boleh Kosong',
+                'tempat_lahir.required'=> 'Tidak Boleh Kosong',
+                'tanggal_lahir.required'=> 'Tidak Boleh Kosong',
+                'hp.required'=> 'Tidak Boleh Kosong',
+                'berkas.required'=> 'Tidak Boleh Kosong',
+                'email.required'=> 'Tidak Boleh Kosong',
+                'alamat.required'=> 'Tidak Boleh Kosong',
+                'gambar.required'=> 'Tidak Boleh Kosong dan tidak boleh lebih dari 2mb',
+                'nama_ayah.required'=> 'Tidak Boleh Kosong',
+                'nama_ibu.required'=> 'Tidak Boleh Kosong',
+                'pekerjaan_ayah.required'=> 'Tidak Boleh Kosong',
+                'pekerjaan_ibu.required'=> 'Tidak Boleh Kosong',
+                'pendidikan_ayah.required'=> 'Tidak Boleh Kosong',
+                'pendidikan_ibu.required'=> 'Tidak Boleh Kosong',
+                'nohp_ayah.required'=> 'Tidak Boleh Kosong',
+                'nohp_ibu.required'=> 'Tidak Boleh Kosong',
+                'penghasilan_ayah.required'=> 'Tidak Boleh Kosong',
+                'file.required'=> 'Tidak Boleh Kosong',
+                'penghasilan_ibu.required'=> 'Tidak Boleh Kosong',
+                'berkas.required'=> 'Tidak Boleh Kosong',
             ]);
 
 
@@ -72,16 +88,16 @@ class HomeDaftarOnline extends Controller
             $data ['gambar'] = null;
         }
 
-        // if ($request -> hasFile('berkas')) {
-        //     $berkas = $request->file('berkas');
-        //     $file_name = time ().'-'. $berkas -> getClientOriginalName ();
+            if ($request -> hasFile('berkas')) {
+                $berkas = $request->file('berkas');
+                $file_name = time ().'-'. $berkas -> getClientOriginalName ();
 
-        //     $storage = 'uploads/daftar_online/';
-        //     $berkas->move ($storage, $file_name);
-        //     $data ['berkas'] =$storage .$file_name;
-        // }else {
-        //     $data ['berkas'] = null;
-        // }
+                $storage = 'uploads/daftar_online/';
+                $berkas->move ($storage, $file_name);
+                $data ['berkas'] =$storage .$file_name;
+            }else {
+                $data ['berkas'] = null;
+            }
 
 
          // upload file

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();
             $table->text('gambar');
+            $table->text('berkas');
 
             //Kontak
             $table->string('email')->nullable();

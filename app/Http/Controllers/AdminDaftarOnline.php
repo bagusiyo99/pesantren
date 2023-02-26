@@ -37,6 +37,13 @@ class AdminDaftarOnline extends Controller
         $daftar_online = DaftarOnline::find ($id);
 
 
+            if($daftar_online->gambar != null){
+            unlink($daftar_online->gambar);
+                }
+
+                if($daftar_online->file != null){
+            unlink($daftar_online->file);
+                }
         Alert::success('sukses', 'data berhasil dihapus');
         $daftar_online->delete();
         return redirect ('/admin/daftar_online');

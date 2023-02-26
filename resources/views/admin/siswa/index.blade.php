@@ -51,7 +51,7 @@
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
                                 <td> {{ $item->judul }} </td>
-                                <td><a class="btn btn-success " width="60px" href="/{{ $item->file }}"Download><i
+                                <td><a class="btn btn-success " width="60px" href="/{{ $item->file }}"download><i
                                             class=" fa fa-download"></i> Download</a></td>
 
                                 <td>

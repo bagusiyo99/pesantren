@@ -10,8 +10,8 @@
 
                             <div class="p-4 text-daftar">
                                 <h5 class="font-size-16 mb-1">Data Pribadi</h5>
-                                <p>nama_ayah, NIK, Nama, Jenis Kelamin, Pas
-                                    Photo, TTL, dsb</p>
+                                <p>FIle maksimal 2mb </p>
+
                             </div>
                         </a>
                         <div id="personal-saya" class="collapse show">
@@ -128,6 +128,9 @@
                                     </div>
                                 </div>
 
+
+
+
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
@@ -156,16 +159,29 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label" for="zip-code">Pas Photo</label>
+                                            <label class="form-label">Pas Foto</label>
                                             <div class="input-group">
                                                 <div class="form-file">
-                                                    <input type="file" class="form-file-input form-control"
+                                                    {{-- <input type="file" class="form-file-input form-control"
                                                         name="gambar" accept="image/png, image/jpg, image/jpeg"
                                                         class="form-control                             
                                                     @error('gambar')
                                                         is-invalid
                                                     @enderror"
                                                         value="{{ isset($daftar_online) ? $daftar_online->gambar : old('gambar') }}">
+                                                    @error('gambar')
+                                                        <div class="invalid-feedback">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror --}}
+                                                    <input type="file" id="formFile" name="gambar"
+                                                        accept="image/png, image/jpg, image/jpeg"
+                                                        class="form-control                             
+                        @error('gambar')
+                            is-invalid
+                            @enderror"
+                                                        placeholder="Email"
+                                                        value="{{ isset($pendaftaran) ? $pendaftaran->gambar : old('gambar') }}">
                                                     @error('gambar')
                                                         <div class="invalid-feedback">
                                                             {{ $message }}
@@ -199,7 +215,7 @@
                                         </div>
                                     </div>
 
-                                    {{-- <div class="col-lg-4">
+                                    <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
                                             <label class="form-label" for="zip-code">Berkas ijasah dan
                                                 lain-lain</label>
@@ -223,7 +239,7 @@
 
 
 
-                                    </div> --}}
+                                    </div>
                                 </div>
 
 
@@ -242,15 +258,14 @@
 
                             <div class="p-4 text-daftar">
                                 <h5 class="font-size-16 mb-1">Data Orang Tua</h5>
-                                <p>NISN, NIK, Nama, Jenis Kelamin, Pas
-                                    Photo, TTL, dsb</p>
+                                <p>FIle maksimal 2mb </p>
                             </div>
                         </a>
                         <div id="ortu-saya" class="collapse show">
                             <div class="p-4 border-top">
 
                                 <div class="row">
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">Nama Ayah</label>
                                             <input type="text" id="personal-data-nisn" name="nama_ayah"
@@ -268,7 +283,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
                                             <label class="form-label" for="personal-data-nik">Nama Ibu</label>
                                             <input type="text" id="personal-data-nik" name="nama_ibu"
@@ -286,16 +301,47 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-3">
+
+                                    <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">Pekerjaan ayah</label>
-                                            <input type="text" name="pekerjaan_ayah"
-                                                class="form-control                             
-                                                    @error('pekerjaan_ayah')
+                                            <label class="form-label">file</label>
+                                            <div class="input-group">
+                                                <div class="form-file">
+                                                    <input type="file" accept=".doc,.docx,.pdf,.zip,"
+                                                        class="form-file-input form-control" name="file"
+                                                        class="form-control                             
+                                                    @error('file')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan Pekerjaan ayah"
+                                                        value="{{ isset($daftar_online) ? $daftar_online->file : old('file') }}">
+                                                    @error('file')
+                                                        <div class="invalid-feedback">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="mb-3 mb-4">
+                                            <label class="form-label">Pekerjaan Ayah </label>
+                                            <select name="pekerjaan_ayah"
+                                                class="form-control wide @error('pekerjaan_ayah')
+                                                        is-invalid
+                                                    @enderror"
                                                 value="{{ isset($daftar_online) ? $daftar_online->pekerjaan_ayah : old('pekerjaan_ayah') }}">
+                                                <option disabled selected>Pekerjaan Ayah</option>
+                                                <option value="PNS">PNS</option>
+                                                <option value="KARYAWAN">KARYAWAN</option>
+                                                <option value="GURU">GURU</option>
+                                                <option value="WIRAUSAHA">WIRAUSAHA</option>
+                                                <option value="DOKTER">DOKTER</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+                                            </select>
                                             @error('pekerjaan_ayah')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -304,17 +350,23 @@
                                         </div>
                                     </div>
 
-
                                     <div class="col-lg-3">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">Pekerjaan ibu</label>
-                                            <input type="text" name="pekerjaan_ibu"
-                                                class="form-control                             
-                                                    @error('pekerjaan_ibu')
+                                            <label class="form-label">Pekerjaan Ibu </label>
+                                            <select name="pekerjaan_ibu"
+                                                class="form-control wide @error('pekerjaan_ibu')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan Pekerjaan ibu"
                                                 value="{{ isset($daftar_online) ? $daftar_online->pekerjaan_ibu : old('pekerjaan_ibu') }}">
+                                                <option disabled selected>Pekerjaan Ibu</option>
+                                                <option value="PNS">PNS</option>
+                                                <option value="IRT">IBU RUMAH TANGGA</option>
+                                                <option value="KARYAWAN">KARYAWAN</option>
+                                                <option value="GURU">GURU</option>
+                                                <option value="WIRAUSAHA">WIRAUSAHA</option>
+                                                <option value="DOKTER">DOKTER</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+                                            </select>
                                             @error('pekerjaan_ibu')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -323,21 +375,79 @@
                                         </div>
                                     </div>
 
-                                </div>
 
-                                <div class="row">
 
                                     <div class="col-lg-3">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">Pendidikan ayah</label>
-                                            <input type="text" name="pendidikan_ayah"
-                                                placeholder="Masukkan pendidikan_ayah "
-                                                class="form-control                             
-                                                    @error('pendidikan_ayah')
+                                            <label class="form-label">Penghasilan Ayah </label>
+                                            <select name="penghasilan_ayah"
+                                                class="form-control wide @error('penghasilan_ayah')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan pendidikan ayah"
+                                                value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ayah : old('penghasilan_ayah') }}">
+                                                <option disabled selected>Penghasilan Ibu</option>
+                                                <option value="Rp.1.000.000">-Rp.1.000.000</option>
+                                                <option value="Rp.1.500.000-2.500.000">Rp.1.500.000-2.500.000</option>
+                                                <option value="Rp.2.500.000-3.500.000">Rp.2.500.000-3.500.000</option>
+                                                <option value="Rp.4.500.000-7.500.000">Rp.4.500.000-7.500.000</option>
+                                                <option value="+Rp.10.000.000">+Rp.10.000.000</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+                                            </select>
+                                            @error('penghasilan_ayah')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <div class="mb-3 mb-4">
+                                            <label class="form-label">Penghasilan Ibu </label>
+                                            <select name="penghasilan_ibu"
+                                                class="form-control wide @error('penghasilan_ibu')
+                                                        is-invalid
+                                                    @enderror"
+                                                value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ibu : old('penghasilan_ibu') }}">
+                                                <option disabled selected>Penghasilan Ibu</option>
+                                                <option value="Rp.1.000.000">-Rp.1.000.000</option>
+                                                <option value="Rp.1.500.000-2.500.000">Rp.1.500.000-2.500.000</option>
+                                                <option value="Rp.2.500.000-3.500.000">Rp.2.500.000-3.500.000</option>
+                                                <option value="Rp.4.500.000-7.500.000">Rp.4.500.000-7.500.000</option>
+                                                <option value="+Rp.10.000.000">+Rp.10.000.000</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+
+                                            </select>
+                                            @error('penghasilan_ibu')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="mb-3 mb-4">
+                                            <label class="form-label">Pendidikan Ayah </label>
+                                            <select name="pendidikan_ayah"
+                                                class="form-control wide @error('pendidikan_ayah')
+                                                        is-invalid
+                                                    @enderror"
                                                 value="{{ isset($daftar_online) ? $daftar_online->pendidikan_ayah : old('pendidikan_ayah') }}">
+                                                <option disabled selected>Pendidikan Ayah</option>
+                                                <option value="SD">SD</option>
+                                                <option value="SMP">SMP</option>
+                                                <option value="SMA/SMK">SMA/SMK</option>
+                                                <option value="SI">SI</option>
+                                                <option value="S2">S2</option>
+                                                <option value="S3">S3</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+                                            </select>
                                             @error('pendidikan_ayah')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -348,15 +458,21 @@
 
                                     <div class="col-lg-3">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">Pendidikan Ibu</label>
-                                            <input type="text" name="pendidikan_ibu"
-                                                placeholder="Masukkan pendidikan_ibu Lengkap"
-                                                class="form-control                             
-                                                    @error('pendidikan_ibu')
+                                            <label class="form-label">Pendidikan Ibu </label>
+                                            <select name="pendidikan_ibu"
+                                                class="form-control wide @error('pendidikan_ibu')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan pendidikan_ibu"
                                                 value="{{ isset($daftar_online) ? $daftar_online->pendidikan_ibu : old('pendidikan_ibu') }}">
+                                                <option disabled selected>Pendidikan Ibu</option>
+                                                <option value="SD">SD</option>
+                                                <option value="SMP">SMP</option>
+                                                <option value="SMA/SMK">SMA/SMK</option>
+                                                <option value="SI">SI</option>
+                                                <option value="S2">S2</option>
+                                                <option value="S3">S3</option>
+                                                <option value="DLL">DAN LAIN-LAIN</option>
+                                            </select>
                                             @error('pendidikan_ibu')
                                                 <div class="invalid-feedback">
                                                     {{ $message }}
@@ -374,7 +490,7 @@
                                                     @error('nohp_ayah')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan nohp_ayah"
+                                                placeholder="Masukkan Nomor telpon aktif"
                                                 value="{{ isset($daftar_online) ? $daftar_online->nohp_ayah : old('nohp_ayah') }}">
                                             @error('nohp_ayah')
                                                 <div class="invalid-feedback">
@@ -388,7 +504,7 @@
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">No Telpon Ibu</label>
                                             <input type="text" name="nohp_ibu"
-                                                placeholder="Masukkan nohp_ibu Lengkap"
+                                                placeholder="Masukkan Nomor telpon aktif"
                                                 class="form-control                             
                                                     @error('nohp_ibu')
                                                         is-invalid
@@ -405,110 +521,71 @@
 
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label">penghasilan ayah</label>
-                                            <input type="text" name="penghasilan_ayah"
-                                                placeholder="Masukkan Tempat Lahir"
-                                                class="form-control                             
-                                                    @error('penghasilan_ayah')
-                                                        is-invalid
-                                                    @enderror"
-                                                value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ayah : old('penghasilan_ayah') }}">
-                                            @error('penghasilan_ayah')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label">penghasilan ibu</label>
-                                            <input type="text" name="penghasilan_ibu"
-                                                placeholder="Masukkan Tempat Lahir"
-                                                class="form-control                             
-                                                    @error('penghasilan_ibu')
-                                                        is-invalid
-                                                    @enderror"
-                                                value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ibu : old('penghasilan_ibu') }}">
-                                            @error('penghasilan_ibu')
-                                                <div class="invalid-feedback">
-                                                    {{ $message }}
-                                                </div>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="mb-3 mb-4">
-                                            <label class="form-label">file</label>
-                                            <div class="input-group">
-                                                <div class="form-file">
-                                                    <input type="file" class="form-file-input form-control"
-                                                        name="file"
-                                                        class="form-control                             
-                                                    @error('file')
-                                                        is-invalid
-                                                    @enderror"
-                                                        value="{{ isset($daftar_online) ? $daftar_online->file : old('file') }}">
-                                                    @error('file')
-                                                        <div class="invalid-feedback">
-                                                            {{ $message }}
-                                                        </div>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-
-
-
                             </div>
 
 
 
                         </div>
-                    </div>
-
-                </div>
-            </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="row my-4">
-                <div class="col">
-                    <div class="text-end mt-2 mt-sm-0">
-                        <button type="submit" name="add" class="btn btn-primary">Buat
-                            Pendaftaran</button>
                     </div>
                 </div>
-                <!-- end col -->
+
             </div>
-            <!-- end row-->
     </div>
-    </form>
+
+
+
+    <div class="row my-4">
+        <div class="col">
+            <div class="text-end mt-2 mt-sm-0">
+                <button type="submit" name="add" class="btn btn-primary">Buat
+                    Pendaftaran</button>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row-->
+</div>
+</form>
 </div>
 </div>
+
+
+
+{{-- <div class="col-lg-4">
+                                    <div class="mb-3 mb-4">
+                                        <label class="form-label">penghasilan ayah</label>
+                                        <input type="text" name="penghasilan_ayah"
+                                            placeholder="Masukkan Tempat Lahir"
+                                            class="form-control                             
+                                                    @error('penghasilan_ayah')
+                                                        is-invalid
+                                                    @enderror"
+                                            value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ayah : old('penghasilan_ayah') }}">
+                                        @error('penghasilan_ayah')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4">
+                                    <div class="mb-3 mb-4">
+                                        <label class="form-label">penghasilan ibu</label>
+                                        <input type="text" name="penghasilan_ibu"
+                                            placeholder="Masukkan Tempat Lahir"
+                                            class="form-control                             
+                                                    @error('penghasilan_ibu')
+                                                        is-invalid
+                                                    @enderror"
+                                            value="{{ isset($daftar_online) ? $daftar_online->penghasilan_ibu : old('penghasilan_ibu') }}">
+                                        @error('penghasilan_ibu')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div> --}}

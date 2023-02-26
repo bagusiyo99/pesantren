@@ -52,7 +52,7 @@
 
                 <a href="/admin/pesan" class="btn btn-primary mb-3">
                     Kembali</a>
-                </form>
+
             </div>
         </div>
     </div>

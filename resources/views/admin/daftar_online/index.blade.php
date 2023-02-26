@@ -11,8 +11,9 @@
                         <tr class="btn-secondary">
                             <td> No </td>
                             <td> Nama </td>
-                            <td> Email</td>
-                            <td> Whatsapp Atau Telpon </td>
+                            <td> Berkas ortu</td>
+                            <td> Berkas siswa </td>
+                            <td> Pas Foto </td>
                             {{-- <td width="50px"> Deskripsi </td> --}}
                             <td> Action </td>
                         </tr>
@@ -22,11 +23,18 @@
                         @foreach ($daftar_online as $item)
                             <tr>
                                 <td> {{ $loop->iteration }} </td>
-                                <td> {{ $item->nama }} </td>
-                                <td> {{ $item->email }} </td>
-                                <td> {{ $item->nik }} </td>
+                                <td> {{ $item->nama_siswa }} </td>
+                                <td> <a class="btn" href="/{{ $item->berkas }}"download><img src="/data/1.png"
+                                            width="70px" height="70px" class="mt-4" alt=""></a> </td>
+                                <td> <a class="btn" href="/{{ $item->file }}"download><img src="/data/2.png"
+                                            width="70px" height="70px" class="mt-4" alt=""></a> </td>
+                                <td> <a class="btn" href="/{{ $item->gambar }}"download><img src="/data/4.png"
+                                            width="70px" height="70px" class="mt-4" alt=""> </a>
+                                </td>
+
 
                                 {{-- <td> {{ $item->desc }} </td> --}}
+
 
                                 <td>
                                     <div class="text-center mb-1">

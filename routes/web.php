@@ -9,7 +9,6 @@ use App\Http\Controllers\admin\AdminAbout;
 use App\Http\Controllers\admin\AdminAuth;
 use App\Http\Controllers\admin\AdminBanner;
 use App\Http\Controllers\admin\AdminBlog;
-use App\Http\Controllers\admin\AdminDaftar;
 use App\Http\Controllers\admin\AdminDasboard;
 use App\Http\Controllers\admin\AdminInformasi;
 use App\Http\Controllers\admin\AdminPendaftaran;
@@ -20,7 +19,6 @@ use App\Http\Controllers\AdminDaftarOnline;
 use App\Http\Controllers\AdminSiswa;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeContact;
-use App\Http\Controllers\HomeDaftar;
 use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
@@ -53,7 +51,6 @@ Route::get('/foto', [Home::class, 'foto']);
 // Route::get('/informasi/detail/{id}', [HomeInfoController::class, 'detail']);
 // Route::get('/informasi', [HomeInfoController::class, 'index']);
 
-Route::get('/daftars', [AdminDaftar::class, 'index']);
 
 
 Route::get('/siswa', [HomeSiswa::class, 'index']);

@@ -145,7 +145,7 @@
                                 <li class="nav-item">
                                     <a href="/admin/daftar_online" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboar\index2.htmld v2</p>
+                                        <p>Admin</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

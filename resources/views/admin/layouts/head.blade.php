@@ -16,7 +16,8 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/adminlte.min.css"> --}}
 
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
