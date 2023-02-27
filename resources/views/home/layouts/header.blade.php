@@ -40,8 +40,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item" href="/foto">Foto</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                     </ul>
                 </li>
                 {{-- <li class="nav-item mx-2">
@@ -59,7 +59,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="/contact" class="dropdown-item">Kirim Pesan</a>
                         <a href="/pendaftaran" class="dropdown-item">Alamat</a>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                     </ul>
                 </li>
                 <li class="nav-item dropdown mx-2">
@@ -70,10 +70,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="/prosedur" class="dropdown-item">Tata Cara Pendaftaran</a>
                         <a href="/formulir" class="dropdown-item">Formulir</a>
-                        <a href="/siswa" class="dropdown-item">Daftar Sekarang</a>
-                        <a href="/daftar_online" class="dropdown-item">Daftar Online</a>
+                        {{-- <a href="/siswa" class="dropdown-item">Daftar Sekarang</a> --}}
+                        <a href="/daftar_online" class="dropdown-item">Daftar Sekarang</a>
 
-                        <a href="/pendaftaran" class="dropdown-item">Konfirmasi Pendaftaran</a>
+                        {{-- <a href="/pendaftaran" class="dropdown-item">Konfirmasi Pendaftaran</a> --}}
                     </ul>
                 </li>
 

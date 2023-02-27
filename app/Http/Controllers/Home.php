@@ -79,18 +79,7 @@ class Home extends Controller
     }
 
 
-            function foto (){
-    $data = [
-    
-     
-        'foto' => Foto::get(),
-
-        'content'=> 'home/foto/index'
-    ];
-    return view('home.layouts.wrapper',$data);
-    }
-
-    
+         
         function siswa (){
     $data = [
     

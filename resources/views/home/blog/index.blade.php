@@ -1,7 +1,7 @@
     <div class="main-blog mt-5">
 
         <div class="container1 mt-5">
-            <div class="blog-berita">
+            <div class="blog-berita" data-aos="fade-right" data-aos-offset="700" data-aos-easing="ease-in-sine">
 
                 <h2 class="h2">Latest Blog Post</h2>
                 @foreach ($blog as $item)
@@ -11,10 +11,10 @@
                                 <img src="/{{ $item->gambar }}" width="150" class="blog-banner-img">
                             </div>
                             <div class="blog-content-wrapper">
-                                <h5 class="blog-topic1 ">Web Performance</h5>
-                                <h3><a href="" class="h3">{{ $item->judul }}</a></h3>
+                                <h5 class="blog-tulis ">{{ $item->created_at->format('d F Y ') }}</h5>
+                                <h3 class="h3"> {{ $item->judul }}</h3>
                                 <p class="blog-text">
-                                    {!! Str::limit($item->deskripsi, 200) !!}</p>
+                                    {!! Str::limit($item->deskripsi, 300) !!}</p>
                                 <a href="/blog/{{ $item->id }}" class="blog-topic text-tiny">Detail</a>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
 
 
 
-            <div class="aside">
+            <div class="aside" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
 
 
                 <div class="tags">

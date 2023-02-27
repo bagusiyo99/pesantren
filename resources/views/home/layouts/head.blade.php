@@ -30,7 +30,7 @@
     <script src="/datatable/js.js"></script>
 
 
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 

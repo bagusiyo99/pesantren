@@ -20,6 +20,7 @@ use App\Http\Controllers\AdminSiswa;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeDaftarOnline;
+use App\Http\Controllers\HomeFoto;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
 
@@ -44,7 +45,10 @@ Route::get('/blog/{id}', [Home::class, 'detailBlog']);
 
 
 Route::get('/formulir', [Home::class, 'formulir']);
-Route::get('/foto', [Home::class, 'foto']);
+
+Route::get('/foto', [HomeFoto::class, 'index']);
+Route::get('/show/{id}', [HomeFoto::class,'detail']);
+
 
 
 // Route::get('/informasi', [HomeInfoController::class, 'index']);

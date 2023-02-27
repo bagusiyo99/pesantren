@@ -9,7 +9,7 @@
 
 <div class="main">
     <h3 class="heading">{{ $informasi->judul }}</h3>
-    <p>{{ $informasi->created_at }}</p>
+    <p>{{ $informasi->created_at->format('d-F-Y ') }}</p>
 
 
     <div class="detail-tentang">

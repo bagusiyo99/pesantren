@@ -115,18 +115,18 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/siswa"
-                                        class="nav-link  {{ Request::is('admin/siswa*') ? 'active' : '' }}">
+                                    <a href="/admin/daftar_online"
+                                        class="nav-link  {{ Request::is('admin/daftar_online*') ? 'active' : '' }}">
                                         <i class="nav-icon   fas fa-solid fa-wallet"></i>
                                         <p>
-                                            Siswa Pendaftaran
+                                            Daftar Sekarang
                                         </p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-item  {{ Request::is('admin/*') ? 'menu-is-opening menu-open' : '' }}">
+                        <li class="nav-item  {{ Request::is('admin/foto') ? 'menu-is-opening menu-open' : '' }}">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fa fa-solid fa-camera"></i>
                                 <p>
@@ -142,20 +142,10 @@
                                         <p>Foto</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="/admin/daftar_online" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="../../index3.html" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboard v3</p>
-                                    </a>
-                                </li>
-                            </ul>
+
                         </li>
+                    </ul>
+                    </li>
 
 
 

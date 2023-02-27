@@ -138,10 +138,10 @@ nav {
 }
 
 .tulis h4 {
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1px;
-    font-weight: 800;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
 .tulis h1 {
@@ -151,7 +151,7 @@ nav {
 }
 
 .tulis p {
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-align: justify;
@@ -176,7 +176,7 @@ nav {
     text-align: center;
     padding: 25px 25px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
-    border: 1px solid #FF6E31;
+    border: 2px solid #058634;
     border-radius: 10px;
     margin: 15px 0;
 }
@@ -184,7 +184,7 @@ nav {
 /* agar diklik muncul di box */
 .fitur .fe-box:hover {
     box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
-    border: 3px solid #243763;
+    border: 3px solid orange;
 }
 
 /* gambar */
@@ -299,7 +299,10 @@ nav {
 
 .card-description a:hover {
     background-color: #227C70;
+    color: white;
 }
+
+
 
 .card-jurusan:hover {
     transform: scale(1.03);
@@ -1039,6 +1042,14 @@ html {
     text-decoration: none;
 }
 
+.blog-tulis {
+    font-weight: 500;
+    text-decoration: none;
+    color: #227C70;
+    font-size: 15px;
+}
+
+
 .blog-topic {
     background: rgb(229, 228, 228);
     font-weight: 600;
@@ -1050,7 +1061,7 @@ html {
 }
 
 .blog-topic:hover {
-    background: rgb(3, 106, 3);
+    background: rgb(3, 114, 75);
     color: white;
 }
 
@@ -1060,7 +1071,7 @@ html {
 }
 
 .blog-card .h3:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .blog-text,
@@ -1074,10 +1085,16 @@ html {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
+    color: rgb(3, 114, 75);
+
 }
 
 .blog-berita .h4 {
     color: rgb(225, 223, 223);
+}
+
+.blog-berita .h2 {
+    color: rgb(3, 114, 75);
 }
 
 
@@ -1319,7 +1336,7 @@ html {
     }
 
     .aside .h2 {
-        color: black;
+        color: rgb(3, 114, 75);
         margin-bottom: 3rem;
         text-align: center;
         line-height: 1.3;
@@ -1360,7 +1377,7 @@ html {
     }
 
     .topic-btn:hover .icon-box {
-        background: green;
+        color: rgb(3, 114, 75);
         color: white;
     }
 
@@ -1381,8 +1398,8 @@ html {
     }
 
     .tags .hashtag {
-        background: rgb(200, 198, 198);
-        color: rgb(10, 10, 10);
+        background: rgb(216, 214, 214);
+        color: rgb(3, 114, 75);
         padding: 5px 10px;
         font-size: var(--fs-5);
         font-weight: 700;
@@ -1391,7 +1408,7 @@ html {
     }
 
     .tags .hashtag:hover {
-        background: green;
+        background: rgb(3, 114, 75);
         color: white;
     }
 
@@ -1400,7 +1417,7 @@ html {
     }
 
     .contact p {
-        color: black;
+        color: rgb(3, 114, 75);
         margin-bottom: 1rem;
     }
 
@@ -1423,19 +1440,19 @@ html {
     }
 
     .social-link .discord {
-        color: green;
+        color: rgb(3, 114, 75);
     }
 
     .social-link .twitter {
-        color: green;
+        color: rgb(3, 114, 75);
     }
 
     .social-link .facebook {
-        color: green;
+        color: rgb(3, 114, 75);
     }
 
     .social-link .icon-box:hover {
-        background: green;
+        background: rgb(3, 114, 75);
         color: white;
     }
 
@@ -1457,7 +1474,7 @@ html {
         width: 100%;
         padding: 0.5rem 1rem;
         font: inherit;
-        color: black;
+        color: rgb(3, 114, 75);
         border-radius: 5px;
         margin-bottom: 1rem;
     }

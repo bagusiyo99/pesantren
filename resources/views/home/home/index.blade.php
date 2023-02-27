@@ -14,7 +14,7 @@
     <div class="carousel-inner mt-5">
         @foreach ($banner as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/{{ $item->gambar }}" class="d-block w-100" alt="">
+                <img src="/{{ $item->gambar }}" height="600px"class="d-block w-100" alt="">
             </div>
         @endforeach
 
@@ -35,7 +35,7 @@
 
 
 
-<section class="fitur" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="4500">
+<section class="fitur" data-aos="fade-down" data-aos-easing="linear" data-aos-offset="200">
     <div class="fe-box">
         <a>
             <img src="img/icon/1.jpg" alt="">
@@ -87,8 +87,8 @@
 <section class="info mb-3">
     <div class="main-info">
         @foreach ($about as $item)
-            <img src="/{{ $item->gambar }}">
-            <div class="tulis">
+            <img src="/{{ $item->gambar }}" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+            <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
                 <h4>{{ $item->judul }}</h4>
                 {{-- <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1> --}}
                 <p>{{ $item->deskripsi }} </p>
@@ -101,7 +101,7 @@
 <div class="bg-success  my-3">
 
     <div class="container my-5">
-        <div class="text-center text-white">
+        <div class="text-center text-white" data-aos="zoom-in" data-aos-offset="200">
             <h4> Hati-Hati Penipuan</h4>
             <p> <strong> Selain dari website ini dan kontak yang tersedia kami tidak mempunyai website lain, jika ada
                     yang
@@ -117,23 +117,25 @@
 </div>
 <main class="container">
 
-    <div class="p-3 p-md-4 mb-5 text-white rounded bg-success">
+    <div class="p-3 p-md-4 mb-5 text-white rounded bg-success" data-aos="fade-down" data-aos-easing="linear"
+        data-aos-duration="1500">
         <div class="col-md-7 px-0">
-            <h1 class="display-4 fst-italic">Beli Barang Elektronik Murah, (nama toko ) Solusinya!</h1>
-            <p class="lead my-3">Dapatkan Update Informasi Terbaru hanya di website (nama toko ) </p>
+            <h1 class="display-4 fst-italic">Ayok Daftarkan putra atau putri terbaik anda di pesantren ini dan dapatkan
+                diskon pendaftaran pertama</h1>
+            <p class="lead my-3">Dapatkan Update Informasi Terbaru hanya di website ini </p>
         </div>
     </div>
 
-    <div class="row mb-2">
+    <div class="row mb-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="4500">
         @foreach ($informasi as $item)
             <div class="col-md-6">
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static masee">
                         <strong class="d-inline-block mb-2 text-success">Informasi Terbaru</strong>
-                        <h3 class="mb-3">{{ $item->judul }}</h3>
-                        <p class="card-text mb-4">{!! Str::limit($item->deskripsi, 200) !!}</p>
-                        <a clas="info" href="/informasi/{{ $item->id }}">Lanjutkan Membaca</a>
+                        <h3 class="mb-1">{{ $item->judul }}</h3>
+                        <p class="card-text mb-3">{!! Str::limit($item->deskripsi, 200) !!}</p>
+                        <a clas="info mt-5" href="/informasi/{{ $item->id }}">Lanjutkan Membaca</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img class="bd-placeholder-img" width="200" height="250" src="/{{ $item->gambar }}">
