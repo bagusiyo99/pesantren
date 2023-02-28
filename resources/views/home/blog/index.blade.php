@@ -55,9 +55,8 @@
                     <div class="wrapper">
 
                         <p>
-                            Do you want to learn more about how I can help your company overcome problems? Let us
-                            have a
-                            conversation.
+                            Jika Anda ingin mengenal kami lebih jauh dan informasi ter-update, maka ikuti kami di media
+                            sosial
                         </p>
 
                         <ul class="social-link">

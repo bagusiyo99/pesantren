@@ -26,7 +26,7 @@
 
                 <div class="form-group">
                     <label for="">Deskripsi</label>
-                    <textarea id="summernote" name="deskripsi"class="form-control" cols="30" rows="10">{{ isset($foto) ? $foto->deskripsi : old('deskripsi') }} </textarea>
+                    <textarea name="deskripsi"class="form-control" cols="30" rows="10">{{ isset($foto) ? $foto->deskripsi : old('deskripsi') }} </textarea>
                     @error('deskripsi')
                         <div class="invalid-feedback">
                             {{ $message }}

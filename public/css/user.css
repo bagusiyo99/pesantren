@@ -1021,13 +1021,13 @@ html {
     padding: 10px;
     margin-bottom: 2rem;
     border-radius: 10px;
-    box-shadow: 0 10px 10px hsla(150, 94%, 21%, 0.05);
+    box-shadow: 0 5px 5px #c2f8e3;
     transition: 0.25s ease;
 }
 
 .blog-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 10px 10px #9ffaf4;
 }
 
 .blog-card-banner {
@@ -1346,7 +1346,7 @@ html {
         background: white;
         border-radius: 10px;
         padding: 40px;
-        box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.05);
+        box-shadow: 0 5px 5px #c2f8e3;
     }
 
     .topics {
@@ -1358,7 +1358,7 @@ html {
         align-items: stretch;
         background: white;
         border-radius: 10px;
-        box-shadow: 0 5px 5px hsla(0, 0%, 0%, 0.05);
+        box-shadow: 0 5px 5px #c2f8e3;
         overflow: hidden;
     }
 

@@ -2,7 +2,7 @@
     <img src="/daftar/bg.jpg" width="100%" height="400px" class="d-block w-100" alt="">
 </div>
 
-<div class="container">
+<div class="container mt-5">
     <div class="card-body">
         <h1 class="text-center mb-2">Formulir </h1>
         <form action="">
@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<div class="container mt-5">
+{{-- <div class="container mt-5">
     <div class="row mb-5">
         <div class="col-sm-6">
             <div class="card">
@@ -59,9 +59,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
-<div class="container">
+{{-- <div class="container">
     <ul class="list-group col-sm-14">
         <li class="list-group-item active" aria-current="true">An active item</li>
         <li class="list-group-item">A second item Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nulla
@@ -74,4 +74,4 @@
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
     </ul>
-</div>
+</div> --}}

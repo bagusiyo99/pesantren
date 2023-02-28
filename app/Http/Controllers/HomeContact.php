@@ -31,7 +31,7 @@ class HomeContact extends Controller
             'pesan' => 'required ',
         ]);
         Pesan::create($data);
-        // Alert::success('sukses', 'Pesan berhasil dikirim');
+         Alert::success('sukses', 'Pesan berhasil dikirim');
         return redirect('/contact');
 
     }

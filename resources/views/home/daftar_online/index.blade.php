@@ -26,7 +26,7 @@
                                                     @error('nisn')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Email"
+                                                placeholder="Masukkan NISN"
                                                 value="{{ isset($daftar_online) ? $daftar_online->nisn : old('nisn') }}">
                                             @error('nisn')
                                                 <div class="invalid-feedback">
@@ -57,8 +57,7 @@
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">Nama</label>
-                                            <input type="text" name="nama_siswa"
-                                                placeholder="Masukkan nama_siswa Lengkap"
+                                            <input type="text" name="nama_siswa" placeholder="Masukkan Nama Lengkap"
                                                 class="form-control                             
                                                     @error('nama_siswa')
                                                         is-invalid
@@ -273,7 +272,7 @@
                                                     @error('nama_ayah')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Nama Ayah"
+                                                placeholder="Masukkan Nama Ayah"
                                                 value="{{ isset($daftar_online) ? $daftar_online->nama_ayah : old('nama_ayah') }}">
                                             @error('nama_ayah')
                                                 <div class="invalid-feedback">

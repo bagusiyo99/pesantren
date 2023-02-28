@@ -14,7 +14,7 @@
     <div class="carousel-inner mt-5">
         @foreach ($banner as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/{{ $item->gambar }}" height="600px"class="d-block w-100" alt="">
+                <img src="/{{ $item->gambar }}" height="700px"class="d-block w-100" alt="">
             </div>
         @endforeach
 

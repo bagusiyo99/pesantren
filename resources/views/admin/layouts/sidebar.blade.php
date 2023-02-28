@@ -3,7 +3,7 @@
             <a href="../../index3.html" class="brand-link">
                 <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">COBA-COBA</span>
             </a>
 
             <!-- Sidebar -->
@@ -21,7 +21,6 @@
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Dashboard
-                                    {{-- <span class="right badge badge-danger">New</span> --}}
                                 </p>
                             </a>
                         </li>
@@ -32,7 +31,6 @@
                                 <i class="nav-icon fa fa-file-contract"></i>
                                 <p>
                                     Informasi
-                                    {{-- <span class="right badge badge-danger">New</span> --}}
                                 </p>
                             </a>
                         </li>
@@ -43,12 +41,11 @@
                                 <i class="nav-icon fas fa-mobile"></i>
                                 <p>
                                     Banner
-                                    {{-- <span class="right badge badge-danger">New</span> --}}
                                 </p>
                             </a>
                         </li>
 
-                        <li class="nav-item  {{ Request::is('admin/*') ? 'menu-is-opening menu-open' : '' }}">
+                        <li class="nav-item  {{ Request::is('admin/about') ? 'menu-is-opening menu-open' : '' }}">
                             <a href="#" class="nav-link ">
                                 <i class="nav-icon fa fa-solid fa-list"></i>
                                 <p>
@@ -76,7 +73,6 @@
                                         <i class="nav-icon fa fa-bullhorn"></i>
                                         <p>
                                             blog
-                                            {{-- <span class="right badge badge-danger">New</span> --}}
                                         </p>
                                     </a>
                                 </li>
@@ -95,16 +91,15 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="/admin/pendaftaran"
                                         class="nav-link   {{ Request::is('admin/pendaftaran*') ? 'active' : '' }}">
                                         <i class="nav-icon fas fa-solid fa-address-card"></i>
                                         <p>
                                             Konfirmasi Pendaftaran
-                                            {{-- <span class="right badge badge-danger">New</span> --}}
                                         </p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="/admin/formulir"
                                         class="nav-link  {{ Request::is('admin/formulir*') ? 'active' : '' }}">

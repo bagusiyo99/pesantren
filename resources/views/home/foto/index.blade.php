@@ -39,9 +39,8 @@
 
 </div> --}}
 
-
 <div class="main">
-    <h3 class="heading">Foto</h3>
+    <h3 class="heading">Foto Kenangan</h3>
 </div>
 <div class="atur ">
     @foreach ($foto as $item)
@@ -53,7 +52,7 @@
             </div>
             <div class="card-description">
                 <h3>{{ $item->judul }}</h3>
-                <p>{!! Str::limit($item->deskripsi, 70) !!}</p>
+                <p>{!! Str::limit($item->deskripsi, 50) !!}</p>
                 <a href="/show/{{ $item->id }}">Detail</a>
             </div>
         </div>
