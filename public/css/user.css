@@ -8,6 +8,24 @@
     color: #EB455F;
 }
 
+.text-tentang {
+    text-decoration: none;
+
+}
+
+.btn-footer {
+    padding: 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.btn-footer:hover {
+    background: white;
+}
+
 a {
     color: #222222;
     text-decoration: none;
