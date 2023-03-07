@@ -33,7 +33,7 @@
 
                 <div class="tags">
 
-                    <h2 class="h2">Tags</h2>
+                    <h2 class="h2">Tag</h2>
 
                     <div class="wrapper">
 
@@ -41,7 +41,7 @@
                         <button class="hashtag">Vidio</button>
                         <button class="hashtag">Foto</button>
 
-                        <a href="/contact" class="hashtag">Kegiatan Siswa Siswi</a>
+                        <a href="/foto" class="hashtag">Kegiatan Siswa Siswi</a>
 
 
                     </div>
@@ -50,7 +50,7 @@
 
                 <div class="contact">
 
-                    <h2 class="h2">Let's Talk</h2>
+                    <h2 class="h2">Sosial Media</h2>
 
                     <div class="wrapper">
 
@@ -87,17 +87,17 @@
 
                 <div class="newsletter">
 
-                    <h2 class="h2">Newsletter</h2>
+                    <h2 class="h2">Pendaftaran</h2>
 
                     <div class="wrapper">
 
                         <p>
-                            Subscribe to our newsletter to be among the first to keep up with the latest updates.
+                            Jika Anda ingin mendaftar, maka klik link di bawah ini.
                         </p>
 
                         <form action="#">
 
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                            <a href="/daftar_online" type="submit" class="btn btn-success">Pendaftaran</a>
                         </form>
 
                     </div>

@@ -58,7 +58,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a href="/contact" class="dropdown-item">Kirim Pesan</a>
-                        <a href="/pendaftaran" class="dropdown-item">Alamat</a>
+                        <a href="/alamat" class="dropdown-item">Alamat</a>
                         {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                     </ul>
                 </li>

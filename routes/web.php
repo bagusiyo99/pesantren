@@ -85,7 +85,19 @@ Route::get('/about', function () {
     return view('home.layouts.wrapper',$data);
 });
 
+Route::get('/sukses', function () {
+    $data = [
+        'content'=> 'home/sukses/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
 
+Route::get('/alamat', function () {
+    $data = [
+        'content'=> 'home/alamat/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
 
 Route::get('/prosedur', function () {
     $data = [

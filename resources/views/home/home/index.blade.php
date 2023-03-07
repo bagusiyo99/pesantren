@@ -14,7 +14,7 @@
     <div class="carousel-inner mt-5">
         @foreach ($banner as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/{{ $item->gambar }}" height="700px"class="d-block w-100" alt="">
+                <img src="/{{ $item->gambar }}" width="100%" height="100px" class=" img-fluid" alt="">
             </div>
         @endforeach
 
@@ -117,10 +117,10 @@
 </div>
 <main class="container">
 
-    <div class="p-3 p-md-4 mb-5 text-white rounded bg-success" data-aos="fade-down" data-aos-easing="linear"
+    <div class="p-5 p-md-4 mb-5 text-white rounded bg-success" data-aos="fade-down" data-aos-easing="linear"
         data-aos-duration="1500">
-        <div class="col-md-7 px-0">
-            <h1 class="display-4 fst-italic">Ayok Daftarkan putra atau putri terbaik anda di pesantren ini dan dapatkan
+        <div>
+            <h1 class="display-5 fst-italic">Ayok Daftarkan putra atau putri terbaik anda di pesantren ini dan dapatkan
                 diskon pendaftaran pertama</h1>
             <p class="lead my-3">Dapatkan Update Informasi Terbaru hanya di website ini </p>
         </div>

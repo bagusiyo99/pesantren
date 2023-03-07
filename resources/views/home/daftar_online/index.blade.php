@@ -1,5 +1,14 @@
 <div class="container mt-5">
-    <div class="row">
+    <div class="row m-5">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form action="/daftar_online/send" method="POST" enctype="multipart/form-data" class="row g-3 align-center">
             @csrf
 
@@ -9,7 +18,7 @@
                         <a href="#personal-saya" class="text-dark text-daftar" data-bs-toggle="collapse">
 
                             <div class="p-4 text-daftar">
-                                <h5 class="font-size-16 mb-1">Data Pribadi</h5>
+                                <h5 class="font-size-16 mb-1">Data Siswa</h5>
                                 <p>FIle maksimal 2mb </p>
 
                             </div>
@@ -115,14 +124,23 @@
 
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label" for="personal-data-gender">Jenis
+                                            <label class="form-label ">Jenis
                                                 Kelamin</label>
-                                            <select class="form-control wide" name="jk">
+                                            <select
+                                                class="form-control wide  @error('jk')
+                                                        is-invalid
+                                                    @enderror"
+                                                name="jk">
                                                 <option disabled selected>Pilih
                                                     Jenis Kelamin </option>
                                                 <option value="Laki-laki">Laki-aki</option>
                                                 <option value="Perempuan">Perempuan</option>
                                             </select>
+                                            @error('jk')
+                                                <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                </div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -484,7 +502,7 @@
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">No Telpon ayah</label>
                                             <input type="text" name="nohp_ayah"
-                                                placeholder="Masukkan nohp_ayah Lengkap"
+                                                placeholder="Masukkan Nomor telpon aktif"
                                                 class="form-control                             
                                                     @error('nohp_ayah')
                                                         is-invalid
@@ -536,10 +554,10 @@
 
 
 
-    <div class="row my-4">
+    <div class="row my-5">
         <div class="col">
-            <div class="text-end mt-2 mt-sm-0">
-                <button type="submit" name="add" class="btn btn-primary">Buat
+            <div class="text-center mt-2 mt-sm-0">
+                <button type="submit" name="add" class="btn btn-success">Buat
                     Pendaftaran</button>
             </div>
         </div>

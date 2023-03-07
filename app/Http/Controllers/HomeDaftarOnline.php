@@ -24,15 +24,15 @@ class HomeDaftarOnline extends Controller
          function send  (Request $request)
     {
         $data = $request -> validate ([
-            'nisn' => 'required',
-            'nik' => 'required',
+            'nisn' => 'required|max:12',
+            'nik' => 'required|max:12',
             'nama_siswa' => 'required',
             'jk' => 'required',
             'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required',
             'email' => 'required ',
             'alamat' => 'required',
-            'hp' => 'required ',
+            'hp' => 'required|max:13 ',
             'gambar' => 'required|file|max:2048',
             'berkas' => 'required',
 
@@ -42,8 +42,8 @@ class HomeDaftarOnline extends Controller
             'pekerjaan_ibu' => 'required ',
             'pendidikan_ayah' => 'required ',
             'pendidikan_ibu' => 'required ',
-            'nohp_ayah' => 'required ',
-            'nohp_ibu' => 'required ',
+            'nohp_ayah' => 'required|max:13 ',
+            'nohp_ibu' => 'required|max:13',
             'penghasilan_ayah' => 'required ',
             'file' => 'required ',
             'penghasilan_ibu' => 'required ',
@@ -114,7 +114,7 @@ class HomeDaftarOnline extends Controller
 
         DaftarOnline::create($data);
         Alert::success('sukses', 'Pesan berhasil dikirim');
-        return redirect('/daftar_online');
+        return redirect('/sukses');
         
 
     }
