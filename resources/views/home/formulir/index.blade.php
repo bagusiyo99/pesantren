@@ -1,5 +1,5 @@
 <div>
-    <img src="/daftar/bg.jpg" width="100%" height="400px" class="d-block w-100" alt="">
+    <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
 </div>
 
 <div class="container mt-5">

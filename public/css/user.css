@@ -13,6 +13,11 @@
 
 }
 
+.img-fluid {
+    height: 400px;
+
+}
+
 .btn-footer {
     padding: 15px;
     border-radius: 20px;

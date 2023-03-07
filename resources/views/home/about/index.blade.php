@@ -1,11 +1,15 @@
-    <section id="page-header" class="blog-header">
+    {{-- <section id="page-header" class="blog-header">
 
 
         <h2>Selamat Datang</h2>
         <p> Sejarah SMKN Bagus Bandar Lampung</p>
 
 
-    </section>
+    </section> --}}
+
+    <div>
+        <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
+    </div>
 
     <div class="main">
         <h3 class="heading">Tentang Sekolah</h3>

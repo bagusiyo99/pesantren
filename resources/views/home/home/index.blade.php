@@ -1,3 +1,8 @@
+{{-- mx-auto d-block : Gambar Ketengah --}}
+{{-- float-left: Gambar kekiri --}}
+{{-- float-rightk : Gambar ke kanan --}}
+{{-- img-fluid :gambar otomatis menyesuaikan --}}
+
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators ">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -14,7 +19,7 @@
     <div class="carousel-inner mt-5">
         @foreach ($banner as $key => $item)
             <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                <img src="/{{ $item->gambar }}" width="100%" height="100px" class=" img-fluid" alt="">
+                <img src="/{{ $item->gambar }}" width="100%" height="100px" class="img-fluid" alt="">
             </div>
         @endforeach
 

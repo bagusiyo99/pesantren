@@ -1,5 +1,5 @@
 <div>
-    <img src="/daftar/bg.jpg" width="100%" height="400px" class="mt-4" alt="">
+    <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
 </div>
 
 

@@ -1,3 +1,6 @@
+<div>
+    <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
+</div>
 <div class="container mt-5">
     <div class="row m-5">
         @if ($errors->any())
