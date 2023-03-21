@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\DaftarOnlineExport;
 use App\Models\DaftarOnline;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminDaftarOnline extends Controller
@@ -52,5 +55,10 @@ class AdminDaftarOnline extends Controller
 
 
     
+        public function export() 
+    {
+        return Excel::download(new DaftarOnlineExport ,'daftar_online-'.Carbon::now()->timestamp. '.xlsx');
+    }
+
 
 }

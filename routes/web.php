@@ -76,6 +76,8 @@ Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
 
 
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
+Route::get('/daftar_online-export', [AdminDaftarOnline::class, 'export']);
+
 
 
 Route::get('/about', function () {

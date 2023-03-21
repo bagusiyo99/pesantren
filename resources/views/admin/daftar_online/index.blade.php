@@ -4,8 +4,8 @@
             <div class="card-body">
                 <table class="table  table-striped table-bordered table-hover table-bordered text-center"
                     id="dataTables-example">
-                    {{-- <a href="/daftar_online-export" class="btn btn-success mb-3"><i class="fa  fa-file-excel"></i>
-                        Excel</a> --}}
+                    <a href="/daftar_online-export" class="btn btn-success mb-3"><i class="fa  fa-file-excel"></i>
+                        Excel</a>
 
                     <thead>
                         <tr class="btn-secondary">

@@ -1,7 +1,63 @@
 <div>
     <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
 </div>
-<div class="container mt-5">
+
+<div class="main">
+    <h3 class="heading">Tata Cara Syarat Upload berkas </h3>
+</div>
+
+<div class="container ">
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Bukti Pembayaran
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Upload Bukti Pembayaran Berbentuk jpg, jpeg, atau Png (tidak boleh melebihi 2mb)
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Berkas ijasah,Foto dan lain-lain
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Semua berkas dijadikan satu meliputi foto 4x3, scan ijasah (jika tidak ada boleh memakai surat
+                    kelulusan) di Upload File Berbentuk zip, rar, pdf, atau word
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Berkas Orang Tua
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Semua berkas dijadikan satu meliputi KTP dan KK di Upload File Berbentuk zip, rar, pdf, atau word
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container ">
     <div class="row m-5">
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -110,12 +166,12 @@
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">No HP atau
                                                 Whatsapp</label>
-                                            <input type="text" name="hp" placeholder="Masukkan no hp Lengkap"
+                                            <input type="text" name="hp"
+                                                placeholder="Masukkan Nomor Hp Yang bisa dihubungi"
                                                 class="form-control                             
                                                     @error('hp')
                                                         is-invalid
                                                     @enderror"
-                                                placeholder="Masukkan hp"
                                                 value="{{ isset($daftar_online) ? $daftar_online->hp : old('hp') }}">
                                             @error('hp')
                                                 <div class="invalid-feedback">
@@ -136,7 +192,7 @@
                                                 name="jk">
                                                 <option disabled selected>Pilih
                                                     Jenis Kelamin </option>
-                                                <option value="Laki-laki">Laki-aki</option>
+                                                <option value="Laki-laki">Laki-Laki</option>
                                                 <option value="Perempuan">Perempuan</option>
                                             </select>
                                             @error('jk')
@@ -179,27 +235,15 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">Pas Foto</label>
+                                            <label class="form-label">Bukti Pembayaran Pendaftaran</label>
                                             <div class="input-group">
                                                 <div class="form-file">
-                                                    {{-- <input type="file" class="form-file-input form-control"
-                                                        name="gambar" accept="image/png, image/jpg, image/jpeg"
-                                                        class="form-control                             
-                                                    @error('gambar')
-                                                        is-invalid
-                                                    @enderror"
-                                                        value="{{ isset($daftar_online) ? $daftar_online->gambar : old('gambar') }}">
-                                                    @error('gambar')
-                                                        <div class="invalid-feedback">
-                                                            {{ $message }}
-                                                        </div>
-                                                    @enderror --}}
                                                     <input type="file" id="formFile" name="gambar"
                                                         accept="image/png, image/jpg, image/jpeg"
                                                         class="form-control                             
-                        @error('gambar')
-                            is-invalid
-                            @enderror"
+                                                        @error('gambar')
+                                                            is-invalid
+                                                            @enderror"
                                                         placeholder="Email"
                                                         value="{{ isset($pendaftaran) ? $pendaftaran->gambar : old('gambar') }}">
                                                     @error('gambar')
@@ -237,12 +281,13 @@
 
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label" for="zip-code">Berkas ijasah dan
+                                            <label class="form-label">Berkas
+                                                ijasah,Foto dan
                                                 lain-lain</label>
                                             <div class="input-group">
                                                 <div class="form-file">
-                                                    <input type="file" class="form-file-input form-control"
-                                                        name="berkas"
+                                                    <input type="file" accept=".doc,.docx,.pdf,.zip,"
+                                                        class="form-file-input form-control" name="berkas"
                                                         class="form-control                             
                                                     @error('berkas')
                                                         is-invalid
@@ -324,7 +369,7 @@
 
                                     <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
-                                            <label class="form-label">file</label>
+                                            <label class="form-label">KTP Dan KK</label>
                                             <div class="input-group">
                                                 <div class="form-file">
                                                     <input type="file" accept=".doc,.docx,.pdf,.zip,"
@@ -560,8 +605,7 @@
     <div class="row my-5">
         <div class="col">
             <div class="text-center mt-2 mt-sm-0">
-                <button type="submit" name="add" class="btn btn-success">Buat
-                    Pendaftaran</button>
+                <button type="submit" name="add" class="btn btn-success">Daftar Sekarang</button>
             </div>
         </div>
         <!-- end col -->
