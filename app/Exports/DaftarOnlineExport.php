@@ -30,7 +30,7 @@ class DaftarOnlineExport implements FromQuery, WithMapping ,WithHeadings
         public function map($daftar_online): array
     {
         return [
-            $daftar_online->id,
+            // $daftar_online->id,
             $daftar_online->nama_siswa,
             $daftar_online->email,
             $daftar_online->hp,
@@ -45,12 +45,12 @@ class DaftarOnlineExport implements FromQuery, WithMapping ,WithHeadings
        public function headings(): array
     {
         return [
-            'No',
+            
             'Nama',
             'Email',
             'Whatsaap atau No telpon',
             'Alamat',
-            'Pesan',
+            'Jenis Kelamin',
             'Waktu Pendaftaran',
 
         ];
